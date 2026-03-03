@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Apartments Medellín — John Irish · CEO Realtor</title>
+<meta name="description" content="Luxury apartments and property sales in Medellín. Curated for foreign buyers. Bilingual advisory, due diligence, lease-to-own financing — John Irish, CEO Realtor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════ TOKENS ═══════════ */
+:root{
+  --ob:#0B0B0F;--ch:#12121A;--sf:#17171F;--s2:#1E1E28;
+  --gd:#C8A24A;--cp:#E3C77A;--ow:#F3F0EA;--mu:#9B9895;--di:#5A5856;
+  --br:rgba(200,162,74,.18);--bd:rgba(255,255,255,.05);--bd2:rgba(255,255,255,.08);
+  --fs:'Cormorant Garamond',Georgia,serif;--fn:'DM Sans',system-ui,sans-serif;--fm:'DM Mono','Courier New',monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ob);color:var(--ow);font-family:var(--fn);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:none}
+img{display:block;width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:none;border:none;background:none;font-family:var(--fn)}
+input,select,textarea{font-family:var(--fn)}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:var(--ob)}
+::-webkit-scrollbar-thumb{background:var(--gd)}
+
+/* ═══════════ CURSOR ═══════════ */
+#cur{position:fixed;width:8px;height:8px;background:var(--gd);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s var(--ease),height .2s var(--ease)}
+#cur-r{position:fixed;width:32px;height:32px;border:1px solid rgba(200,162,74,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s var(--ease),height .35s var(--ease)}
+body.hov #cur{width:14px;height:14px;background:var(--cp)}
+body.hov #cur-r{width:48px;height:48px;border-color:var(--gd)}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;opacity:.025;pointer-events:none;z-index:9000}
+
+/* ═══════════ NAV ═══════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+#nav.sc{background:rgba(11,11,15,.96);border-color:var(--bd);backdrop-filter:blur(12px)}
+.nav-logo{display:flex;align-items:center;gap:16px;cursor:none}
+.nav-logo svg{height:44px;width:auto}
+.nav-wordmark{display:flex;flex-direction:column;gap:1px}
+.nav-name{font-family:var(--fs);font-size:15px;font-weight:400;letter-spacing:.14em;color:var(--ow);text-transform:uppercase;line-height:1}
+.nav-desc{font-family:var(--fm);font-size:8px;letter-spacing:.22em;color:var(--mu);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-link{font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:var(--mu);text-transform:uppercase;transition:color .2s;cursor:none}
+.nav-link:hover,.nav-link.ac{color:var(--ow)}
+.nav-cta{padding:9px 22px;background:var(--gd);color:var(--ob);font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;transition:background .2s;cursor:none}
+.nav-cta:hover{background:var(--cp)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px}
+.ham span{display:block;width:22px;height:1px;background:var(--ow);transition:.3s}
+.mob-menu{position:fixed;inset:0;background:var(--ob);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:32px;transform:translateX(100%);transition:transform .5s var(--ease)}
+.mob-menu.open{transform:translateX(0)}
+.mob-close{position:absolute;top:24px;right:24px;color:var(--mu);font-size:24px;cursor:none}
+
+/* ═══════════ PAGE SYSTEM ═══════════ */
+.page{display:none;min-height:100vh}
+.page.active{display:block;animation:pgIn .55s var(--ease) both}
+@keyframes pgIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}.d6{transition-delay:.6s}
+
+/* ═══════════ SHARED ═══════════ */
+.lbl{font-family:var(--fm);font-size:9.5px;letter-spacing:.28em;color:var(--gd);text-transform:uppercase;display:block;margin-bottom:16px}
+.h-xl{font-family:var(--fs);font-size:clamp(48px,7.5vw,110px);font-weight:300;line-height:.97;letter-spacing:-.02em;color:var(--ow)}
+.h-xl em{font-style:italic;color:var(--cp)}
+.h-lg{font-family:var(--fs);font-size:clamp(36px,5vw,72px);font-weight:300;line-height:1.05;color:var(--ow)}
+.h-lg em{font-style:italic;color:var(--cp)}
+.h-md{font-family:var(--fs);font-size:clamp(26px,3.5vw,44px);font-weight:300;line-height:1.1;color:var(--ow)}
+.h-md em{font-style:italic;color:var(--cp)}
+.bt{font-size:15px;font-weight:300;color:var(--mu);line-height:1.8}
+.rule{width:48px;height:1px;background:var(--gd);margin:28px 0}
+
+.btn-p{display:inline-flex;align-items:center;gap:12px;padding:14px 32px;background:var(--gd);color:var(--ob);font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,transform .2s;cursor:none;white-space:nowrap}
+.btn-p:hover{background:var(--cp);transform:translateY(-1px)}
+.btn-s{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;border:1px solid rgba(200,162,74,.5);color:var(--gd);font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,background .2s,transform .2s;cursor:none;white-space:nowrap}
+.btn-s:hover{border-color:var(--gd);background:rgba(200,162,74,.06);transform:translateY(-1px)}
+.btn-g{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;border:1px solid var(--bd2);color:var(--mu);font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,color .2s;cursor:none}
+.btn-g:hover{border-color:var(--mu);color:var(--ow)}
+.arr{display:inline-block;transition:transform .2s}
+.btn-p:hover .arr,.btn-s:hover .arr{transform:translateX(4px)}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 60px}
+@media(max-width:768px){.wrap{padding:0 24px}}
+
+/* ═══════════ HOME HERO ═══════════ */
+#hh{position:relative;height:100vh;min-height:680px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:96px}
+.hbg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center 30%;transform:scale(1.08);animation:hsc 8s var(--ease) forwards}
+@keyframes hsc{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hov-layer{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.2) 0%,rgba(11,11,15,.1) 30%,rgba(11,11,15,.55) 65%,rgba(11,11,15,.97) 100%)}
+.hc{position:relative;z-index:2;width:100%}
+.hq{font-family:var(--fm);font-size:9.5px;letter-spacing:.28em;color:var(--cp);text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fu .9s .3s var(--ease) forwards}
+.hh1{font-family:var(--fs);font-size:clamp(52px,8.5vw,128px);font-weight:300;line-height:.94;letter-spacing:-.025em;color:var(--ow);margin-bottom:32px;max-width:840px;opacity:0;animation:fu .9s .5s var(--ease) forwards}
+.hh1 em{font-style:italic;color:var(--cp)}
+.hs{font-size:14px;font-weight:300;color:rgba(243,240,234,.65);letter-spacing:.04em;margin-bottom:44px;max-width:440px;line-height:1.7;opacity:0;animation:fu .9s .7s var(--ease) forwards}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fu .9s .9s var(--ease) forwards}
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* ═══════════ TRUST ═══════════ */
+#trust{padding:64px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--ch)}
+.tg{display:grid;grid-template-columns:repeat(6,1fr)}
+.ti{padding:24px 28px;border-right:1px solid var(--bd);display:flex;flex-direction:column;gap:8px}
+.ti:last-child{border-right:none}
+.ti-icon svg{width:20px;height:20px;stroke:var(--gd);fill:none;stroke-width:1.2;margin-bottom:4px}
+.ti-num{font-family:var(--fs);font-size:32px;font-weight:300;color:var(--ow);line-height:1}
+.ti-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.18em;color:var(--mu);text-transform:uppercase;line-height:1.5}
+
+/* ═══════════ PORTFOLIO SECTION ═══════════ */
+#port{padding:128px 0 96px;background:var(--ob)}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;gap:24px;flex-wrap:wrap}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)}
+.pc{background:var(--ob);overflow:hidden;cursor:none;position:relative}
+.pc:hover .pii{transform:scale(1.05)}
+.pc:hover .pov{opacity:1}
+.pim{height:280px;overflow:hidden;position:relative}
+.pii{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s var(--ease)}
+.pov{position:absolute;inset:0;background:rgba(11,11,15,.45);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center}
+.pov-b{padding:10px 24px;border:1px solid rgba(200,162,74,.8);color:var(--cp);font-family:var(--fm);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase}
+.pbdg{position:absolute;top:16px;left:16px;background:rgba(11,11,15,.82);padding:4px 10px;font-family:var(--fm);font-size:8.5px;letter-spacing:.18em;color:var(--gd);text-transform:uppercase;border:1px solid var(--br);backdrop-filter:blur(4px)}
+.pi{padding:22px 24px 26px;border-top:1px solid var(--bd)}
+.pnb{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:6px}
+.pnm{font-family:var(--fs);font-size:22px;font-weight:400;color:var(--ow);margin-bottom:12px;line-height:1.15}
+.psp{display:flex;gap:16px;margin-bottom:16px}
+.ps{font-family:var(--fm);font-size:10px;color:var(--mu);letter-spacing:.06em}
+.ps span{color:var(--ow)}
+.pft{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--bd)}
+.ppr{font-family:var(--fs);font-size:20px;font-weight:400;color:var(--ow)}
+.ppl{font-family:var(--fm);font-size:8.5px;color:var(--di);letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:2px}
+.prq{font-family:var(--fm);font-size:9px;letter-spacing:.16em;color:var(--gd);text-transform:uppercase;display:flex;align-items:center;gap:6px;cursor:none;transition:color .2s,gap .2s}
+.prq:hover{color:var(--cp);gap:10px}
+
+/* ═══════════ PROCESS ═══════════ */
+#proc{padding:128px 0;background:var(--ob)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.ps-item{display:flex;gap:28px;padding:28px 0;border-bottom:1px solid var(--bd)}
+.ps-item:first-child{padding-top:0}
+.ps-item:last-child{border-bottom:none}
+.sn{font-family:var(--fs);font-size:48px;font-weight:300;color:rgba(200,162,74,.1);line-height:1;flex-shrink:0;width:52px;text-align:right;transition:color .3s}
+.ps-item:hover .sn{color:rgba(200,162,74,.35)}
+.st{font-family:var(--fs);font-size:20px;font-weight:400;color:var(--ow);margin-bottom:6px;line-height:1.2}
+.sd{font-size:13.5px;color:var(--mu);line-height:1.75;margin:0}
+.pim2{position:sticky;top:100px;height:560px;overflow:hidden}
+.pim2-bg{width:100%;height:100%;background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85');background-size:cover;background-position:center}
+.pim2-cap{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(transparent,rgba(11,11,15,.9))}
+.pim2-cap p{font-family:var(--fs);font-size:17px;font-style:italic;color:var(--ow);margin:0;line-height:1.4}
+
+/* ═══════════ SOCIAL PROOF ═══════════ */
+#proof{padding:128px 0;background:var(--ch);border-top:1px solid var(--bd)}
+.tg3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);margin:56px 0}
+.tm{background:var(--ch);padding:36px 32px}
+.tmq{font-family:var(--fs);font-size:20px;font-weight:300;font-style:italic;color:var(--ow);line-height:1.5;margin-bottom:24px}
+.tmd{width:32px;height:1px;background:var(--gd);margin-bottom:20px}
+.tma{font-family:var(--fm);font-size:9.5px;letter-spacing:.18em;color:var(--mu);text-transform:uppercase}
+.tmi{font-family:var(--fm);font-size:9px;color:var(--di);letter-spacing:.12em;margin-top:4px}
+.cs2{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);margin-top:1px}
+.cs{background:var(--sf);padding:32px;display:flex;gap:24px;align-items:flex-start}
+.csn{font-family:var(--fs);font-size:48px;font-weight:300;color:rgba(200,162,74,.15);line-height:1;flex-shrink:0}
+.csp{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:8px}
+.cst{font-family:var(--fs);font-size:19px;font-weight:400;color:var(--ow);margin-bottom:8px;line-height:1.3}
+.csd{font-size:13px;color:var(--mu);line-height:1.75;margin:0}
+.prow{margin-top:72px;padding-top:48px;border-top:1px solid var(--bd);text-align:center}
+.plbl{font-family:var(--fm);font-size:9px;letter-spacing:.28em;color:var(--di);text-transform:uppercase;margin-bottom:36px}
+.plgs{display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap}
+.pnm2{font-family:var(--fs);font-size:16px;font-weight:400;color:rgba(185,182,176,.35);letter-spacing:.08em;transition:color .3s;cursor:none}
+.pnm2:hover{color:var(--mu)}
+
+/* ═══════════ ABOUT TEASER ═══════════ */
+#abt{padding:128px 0;background:var(--ob)}
+.al{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--bd)}
+.aic{position:relative;overflow:hidden;min-height:580px}
+.aib{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85');background-size:cover;background-position:center top}
+.aio{position:absolute;inset:0;background:linear-gradient(to right,transparent 40%,var(--ob) 100%),linear-gradient(to top,rgba(11,11,15,.7) 0%,transparent 50%)}
+.atx{padding:64px 56px;border-left:1px solid var(--bd);display:flex;flex-direction:column;justify-content:center}
+.aqm{font-family:var(--fs);font-size:80px;font-weight:300;color:rgba(200,162,74,.15);line-height:.8;margin-bottom:20px}
+.abt-bio{font-size:15px;font-weight:300;color:var(--mu);line-height:1.85;margin-bottom:16px}
+.aprn{margin-top:32px;margin-bottom:40px;list-style:none;display:flex;flex-direction:column;gap:10px}
+.aprn li{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--mu)}
+.aprn li::before{content:'—';color:var(--gd);flex-shrink:0;margin-top:1px;font-family:var(--fm);font-size:11px}
+
+/* ═══════════ RESOURCES ═══════════ */
+#res{padding:128px 0;background:var(--ch);border-top:1px solid var(--bd)}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);margin:56px 0}
+.rc{background:var(--ch);padding:32px 28px;cursor:none;transition:background .3s;position:relative;overflow:hidden}
+.rc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gd),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.rc:hover{background:var(--s2)}
+.rc:hover::after{transform:scaleX(1)}
+.rn{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--gd);margin-bottom:16px}
+.rt{font-family:var(--fs);font-size:20px;font-weight:400;color:var(--ow);line-height:1.25;margin-bottom:12px}
+.rd{font-size:13px;color:var(--mu);line-height:1.7;margin-bottom:20px}
+.rl{font-family:var(--fm);font-size:9.5px;letter-spacing:.16em;color:var(--gd);text-transform:uppercase;display:flex;align-items:center;gap:6px;transition:gap .2s;cursor:none}
+.rc:hover .rl{gap:10px}
+
+/* ═══════════ FINAL CTA ═══════════ */
+#fcta{background:var(--ob)}
+.fcg{display:grid;grid-template-columns:1fr 1fr}
+.fcc{padding:96px 72px;display:flex;flex-direction:column;justify-content:center}
+.fcc.gld{background:linear-gradient(135deg,rgba(200,162,74,.1) 0%,rgba(200,162,74,.03) 100%);border-right:1px solid var(--br);border-top:1px solid var(--br)}
+.fcc.drk{background:var(--ch);border-top:1px solid var(--bd)}
+
+/* ═══════════ LISTINGS PAGE ═══════════ */
+#pg-listings{padding-top:72px}
+.lhero{padding:96px 0 64px;background:var(--ch);border-bottom:1px solid var(--bd)}
+.fbar{position:sticky;top:72px;z-index:100;background:rgba(18,18,26,.97);border-bottom:1px solid var(--bd);backdrop-filter:blur(12px)}
+.finner{display:flex;align-items:center;max-width:1240px;margin:0 auto;padding:0 60px;overflow-x:auto}
+.fi{padding:16px 24px;border-right:1px solid var(--bd);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.fi:last-child{border-right:none;margin-left:auto}
+.fl{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;color:var(--di);text-transform:uppercase;margin-right:4px}
+.fsel{background:transparent;border:none;color:var(--ow);font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;cursor:none;outline:none;appearance:none;padding-right:16px;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23C8A24A' stroke-width='1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0 center}
+.fsel option{background:var(--ch)}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)}
+.lcard{background:var(--ob);cursor:none}
+.lcard:hover .lcii{transform:scale(1.04)}
+.lcim{height:300px;overflow:hidden;position:relative}
+.lcii{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s var(--ease)}
+.ltags{position:absolute;top:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap}
+.ltag{padding:3px 9px;background:rgba(11,11,15,.82);border:1px solid var(--br);font-family:var(--fm);font-size:8px;letter-spacing:.16em;color:var(--gd);text-transform:uppercase;backdrop-filter:blur(4px)}
+.ltag.om{border-color:rgba(227,199,122,.4);color:var(--cp)}
+.lstatus{position:absolute;top:14px;right:14px;width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,.4)}
+.linfo{padding:24px}
+.lnb{font-family:var(--fm);font-size:8.5px;letter-spacing:.22em;color:var(--gd);text-transform:uppercase;margin-bottom:7px}
+.lnm{font-family:var(--fs);font-size:24px;font-weight:400;color:var(--ow);margin-bottom:12px;line-height:1.15}
+.lsps{display:flex;gap:18px;margin-bottom:16px;flex-wrap:wrap}
+.lsp{font-family:var(--fm);font-size:10px;color:var(--mu)}
+.lsp strong{color:var(--ow);font-weight:400}
+.lft{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--bd)}
+.lpf{font-family:var(--fm);font-size:8.5px;color:var(--di);letter-spacing:.15em;text-transform:uppercase;margin-bottom:2px}
+.lpv{font-family:var(--fs);font-size:22px;font-weight:400;color:var(--ow)}
+.ldb{padding:9px 16px;background:var(--gd);color:var(--ob);font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;cursor:none;transition:background .2s}
+.ldb:hover{background:var(--cp)}
+.scta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(11,11,15,.97);border-top:1px solid var(--br);padding:14px 60px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px);transform:translateY(100%);transition:transform .4s var(--ease)}
+.scta.show{transform:translateY(0)}
+.stxt{font-family:var(--fs);font-size:18px;font-weight:300;font-style:italic;color:var(--ow)}
+
+/* ═══════════ DETAIL PAGE ═══════════ */
+#pg-detail{padding-top:72px}
+.dhero{position:relative;height:80vh;overflow:hidden}
+.dhbg{position:absolute;inset:0;background-size:cover;background-position:center}
+.dho{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.15) 0%,rgba(11,11,15,.9) 100%)}
+.dhc{position:absolute;bottom:0;left:0;right:0;padding:48px 60px}
+.dhbr{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:rgba(243,240,234,.45);text-transform:uppercase;margin-bottom:12px;cursor:none}
+.dhbr span{color:var(--mu)}
+.dhn{font-family:var(--fs);font-size:clamp(40px,6vw,80px);font-weight:300;line-height:1;color:var(--ow);margin-bottom:12px}
+.dhloc{font-family:var(--fm);font-size:10px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase}
+.dqf{background:var(--ch);border-bottom:1px solid var(--bd);padding:24px 60px;display:flex;gap:0;align-items:center;flex-wrap:wrap}
+.dqfi{padding:0 32px 0 0;margin-right:32px;border-right:1px solid var(--bd);flex-shrink:0}
+.dqfi:last-child{border-right:none}
+.dqfl{font-family:var(--fm);font-size:8.5px;letter-spacing:.18em;color:var(--di);text-transform:uppercase;margin-bottom:3px}
+.dqfv{font-family:var(--fs);font-size:20px;font-weight:400;color:var(--ow)}
+.dbody{display:grid;grid-template-columns:1fr 360px}
+.dmain{padding:72px 60px}
+.dsb{padding:40px 36px;background:var(--ch);border-left:1px solid var(--bd);position:sticky;top:72px;height:calc(100vh - 72px);overflow-y:auto;display:flex;flex-direction:column;gap:28px}
+.sbpb{padding-bottom:24px;border-bottom:1px solid var(--bd)}
+.sbpf{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--di);text-transform:uppercase;margin-bottom:4px}
+.sbpv{font-family:var(--fs);font-size:36px;font-weight:300;color:var(--ow);line-height:1;margin-bottom:6px}
+.sbpa{font-family:var(--fm);font-size:9px;color:var(--mu);letter-spacing:.1em}
+.sbdd{padding:20px;background:var(--sf);border:1px solid var(--bd)}
+.sbddt{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:14px}
+.ddi{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;color:var(--mu)}
+.ddi:last-child{border-bottom:none}
+.ddc{width:14px;height:14px;border-radius:50%;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ddc::after{content:'✓';font-size:8px;color:#4ade80}
+.dsec{margin-bottom:56px}
+.dsec h3{font-family:var(--fm);font-size:9.5px;letter-spacing:.25em;color:var(--gd);text-transform:uppercase;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bd)}
+.wl{list-style:none;display:flex;flex-direction:column;gap:12px}
+.wl li{display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--mu);line-height:1.65}
+.wl li::before{content:'—';color:var(--gd);font-family:var(--fm);font-size:11px;flex-shrink:0;margin-top:2px}
+.dgal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:4px;height:440px}
+.gimg{background-size:cover;background-position:center;overflow:hidden;cursor:none}
+.gimg:first-child{grid-row:1/3}
+.amg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd)}
+.ami{background:var(--sf);padding:16px 18px;font-size:13px;color:var(--mu);display:flex;align-items:center;gap:10px}
+.amd{width:4px;height:4px;border-radius:50%;background:var(--gd);flex-shrink:0}
+.mob-scta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(11,11,15,.97);border-top:1px solid var(--br);padding:12px 24px;gap:10px;backdrop-filter:blur(12px)}
+
+/* ═══════════ ABOUT PAGE ═══════════ */
+#pg-about{padding-top:72px}
+.abhero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh}
+.abhi{position:relative;overflow:hidden}
+.abhib{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85');background-size:cover;background-position:center top}
+.abhio{position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,var(--ob) 100%)}
+.abtx{padding:120px 72px 72px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--bd);background:var(--ob)}
+
+/* Contact strip */
+.contact-strip{background:var(--ch);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:32px 0}
+.cstrip-inner{display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap}
+.csi{display:flex;align-items:center;gap:12px}
+.csi-icon svg{width:18px;height:18px;stroke:var(--gd);fill:none;stroke-width:1.2}
+.csi-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;color:var(--di);text-transform:uppercase;margin-bottom:2px}
+.csi-val{font-size:14px;color:var(--ow)}
+
+.ab-story{padding:96px 0;background:var(--ch);border-top:1px solid var(--bd)}
+.absg{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.abs-text p{font-size:15px;color:var(--mu);line-height:1.85;margin-bottom:20px}
+.abs-text p:last-child{margin-bottom:0}
+.ab-services{margin-top:32px}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd);margin-top:20px}
+.svc-item{background:var(--sf);padding:16px 18px;display:flex;align-items:flex-start;gap:10px}
+.svc-dot{width:4px;height:4px;border-radius:50%;background:var(--gd);flex-shrink:0;margin-top:7px}
+.svc-name{font-size:13px;color:var(--ow);line-height:1.5}
+
+.ab-vals{padding:96px 0;background:var(--ob);border-top:1px solid var(--bd)}
+.vals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);margin-top:56px}
+.val-card{background:var(--ob);padding:48px 40px;position:relative;overflow:hidden;transition:background .3s}
+.val-card::before{content:attr(data-num);position:absolute;top:-10px;right:24px;font-family:var(--fs);font-size:120px;font-weight:300;color:rgba(200,162,74,.04);line-height:1;pointer-events:none}
+.val-card:hover{background:var(--sf)}
+.val-num{font-family:var(--fm);font-size:9px;letter-spacing:.22em;color:var(--gd);text-transform:uppercase;margin-bottom:16px}
+.val-title{font-family:var(--fs);font-size:28px;font-weight:300;font-style:italic;color:var(--ow);margin-bottom:12px;line-height:1.15}
+.val-text{font-size:14px;color:var(--mu);line-height:1.75}
+
+.ab-partners{padding:96px 0;background:var(--ch);border-top:1px solid var(--bd)}
+.ptg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);margin-top:56px}
+.ptc{background:var(--ch);padding:32px 28px}
+.pttype{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:10px}
+.ptnm{font-family:var(--fs);font-size:19px;font-weight:400;color:var(--ow);margin-bottom:8px;line-height:1.2}
+.ptd{font-size:12.5px;color:var(--mu);line-height:1.65;margin:0}
+.ab-tms{padding:96px 0;background:var(--ob);border-top:1px solid var(--bd)}
+.ab-cta{padding:96px 0;background:var(--ch);border-top:1px solid var(--bd);text-align:center}
+
+/* ═══════════ APPLY PAGE ═══════════ */
+#pg-apply{padding-top:72px}
+.apply-layout{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 72px)}
+.apply-left{background:var(--ch);padding:80px 72px;border-right:1px solid var(--bd);display:flex;flex-direction:column;justify-content:space-between}
+.apply-right{background:var(--ob);padding:80px 72px;display:flex;flex-direction:column}
+.al-info{display:flex;flex-direction:column;gap:32px;margin-top:48px}
+.ali{display:flex;gap:16px;align-items:flex-start}
+.ali-n{width:28px;height:28px;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:10px;color:var(--gd);flex-shrink:0;margin-top:2px}
+.ali-t{font-size:14px;color:var(--mu);line-height:1.65}
+.ali-t strong{color:var(--ow);font-weight:400;display:block;margin-bottom:2px}
+.al-img{height:220px;overflow:hidden;margin-top:48px}
+.al-img-bg{width:100%;height:100%;background-image:url('https://images.unsplash.com/photo-1548802673-380894b0a0df?auto=format&fit=crop&w=700&q=85');background-size:cover;background-position:center}
+
+/* Steps nav for apply page */
+.steps-nav{display:flex;gap:0;margin-bottom:40px;background:var(--ch);border:1px solid var(--bd)}
+.step-tab{flex:1;padding:16px;display:flex;flex-direction:column;align-items:center;gap:6px;border-right:1px solid var(--bd);cursor:none;transition:background .2s;position:relative}
+.step-tab:last-child{border-right:none}
+.step-tab.done{background:rgba(200,162,74,.06)}
+.step-tab.curr{background:rgba(200,162,74,.1);border-bottom:2px solid var(--gd)}
+.step-tab-num{font-family:var(--fm);font-size:10px;letter-spacing:.1em;color:var(--di);transition:color .2s}
+.step-tab.curr .step-tab-num{color:var(--gd)}
+.step-tab.done .step-tab-num{color:var(--gd)}
+.step-tab-lbl{font-family:var(--fm);font-size:8.5px;letter-spacing:.15em;color:var(--di);text-transform:uppercase;transition:color .2s}
+.step-tab.curr .step-tab-lbl{color:var(--mu)}
+.step-tab.done .step-tab-lbl{color:var(--mu)}
+
+.fpb{height:2px;background:var(--bd);margin-bottom:40px;position:relative;overflow:hidden}
+.fpf{height:100%;background:var(--gd);transition:width .5s var(--ease)}
+.fsc{display:none;flex:1;flex-direction:column;gap:22px;animation:si .4s var(--ease) both}
+.fsc.active{display:flex}
+@keyframes si{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.fslbl{font-family:var(--fm);font-size:9px;letter-spacing:.25em;color:var(--gd);text-transform:uppercase;margin-bottom:4px}
+.fstt{font-family:var(--fs);font-size:32px;font-weight:300;color:var(--ow);line-height:1.1;margin-bottom:4px}
+.fssb{font-size:13px;color:var(--mu);margin-bottom:8px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.flbl{font-family:var(--fm);font-size:9px;letter-spacing:.18em;color:var(--mu);text-transform:uppercase}
+.finp{background:var(--sf);border:1px solid var(--bd2);padding:13px 16px;color:var(--ow);font-family:var(--fn);font-size:14px;font-weight:300;outline:none;transition:border-color .2s;width:100%}
+.finp:focus{border-color:rgba(200,162,74,.5)}
+.finp::placeholder{color:var(--di)}
+.fsel2{background:var(--sf);border:1px solid var(--bd2);padding:13px 16px;color:var(--ow);font-family:var(--fn);font-size:14px;font-weight:300;outline:none;transition:border-color .2s;width:100%;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23C8A24A' stroke-width='1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:none}
+.fsel2:focus{border-color:rgba(200,162,74,.5)}
+.fsel2 option{background:var(--ch)}
+.ftarea{background:var(--sf);border:1px solid var(--bd2);padding:13px 16px;color:var(--ow);font-family:var(--fn);font-size:14px;font-weight:300;outline:none;transition:border-color .2s;width:100%;resize:vertical;min-height:80px}
+.ftarea:focus{border-color:rgba(200,162,74,.5)}
+.rg2,.cg{display:flex;flex-direction:column;gap:8px}
+.ro,.co{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--sf);border:1px solid var(--bd2);cursor:none;transition:border-color .2s,background .2s;user-select:none}
+.ro:hover,.co:hover{border-color:rgba(200,162,74,.3);background:var(--s2)}
+.ro.sel,.co.sel{border-color:var(--gd);background:rgba(200,162,74,.06)}
+.rdot,.cbox{width:16px;height:16px;border:1px solid var(--di);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s}
+.cbox{border-radius:0}
+.ro.sel .rdot,.co.sel .cbox{border-color:var(--gd);background:var(--gd)}
+.ro.sel .rdot::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--ob)}
+.co.sel .cbox::after{content:'✓';font-size:10px;color:var(--ob);font-weight:bold}
+.rtxt,.ctxt{font-size:13.5px;font-weight:300;color:var(--ow)}
+.msg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fnav{display:flex;gap:12px;margin-top:auto;padding-top:32px}
+.fnav .btn-p{flex:1;justify-content:center}
+.fbk{padding:13px 20px;border:1px solid var(--bd2);color:var(--mu);font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:none;transition:color .2s,border-color .2s}
+.fbk:hover{color:var(--ow);border-color:var(--mu)}
+.find{font-family:var(--fm);font-size:9px;letter-spacing:.15em;color:var(--di);text-transform:uppercase;text-align:center;margin-top:12px}
+.fr{display:none}
+.fr.active{display:flex;flex-direction:column;gap:24px;align-items:flex-start;animation:si .5s var(--ease) both}
+.rsd{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+.rsn{font-family:var(--fs);font-size:80px;font-weight:300;line-height:1;color:var(--cp)}
+.rsdm{font-family:var(--fm);font-size:14px;color:var(--di);letter-spacing:.1em}
+.rtier{display:inline-block;padding:4px 12px;border:1px solid;font-family:var(--fm);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase}
+.rtier.hot{border-color:var(--gd);color:var(--cp);background:rgba(200,162,74,.08)}
+.rtier.warm{border-color:rgba(200,162,74,.35);color:rgba(200,162,74,.7)}
+.rtier.cold{border-color:var(--bd2);color:var(--mu)}
+.rmsg{font-family:var(--fs);font-size:26px;font-weight:300;color:var(--ow);line-height:1.25}
+.rsub{font-size:14px;color:var(--mu);line-height:1.75}
+.rnx{background:var(--sf);border:1px solid var(--bd);padding:24px;width:100%}
+.rnxt{font-family:var(--fm);font-size:9px;letter-spacing:.22em;color:var(--gd);text-transform:uppercase;margin-bottom:16px}
+.rnxi{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;color:var(--mu)}
+.rnxi:last-child{border-bottom:none}
+.rnxi::before{content:'→';color:var(--gd);font-size:11px;flex-shrink:0;margin-top:1px}
+
+/* ═══════════ FOOTER ═══════════ */
+footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
+.fg2{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px}
+.fb-lgo{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.fb-lgo svg{height:40px;width:auto}
+.fb-desc{font-size:13px;color:var(--mu);line-height:1.75;max-width:280px;margin-bottom:24px}
+.fct{font-family:var(--fm);font-size:9px;letter-spacing:.25em;color:var(--gd);text-transform:uppercase;margin-bottom:20px}
+.fl2{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fl2 a{font-size:13px;color:var(--mu);transition:color .2s;cursor:none}
+.fl2 a:hover{color:var(--ow)}
+.fci{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+.fcil{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;color:var(--di);text-transform:uppercase}
+.fciv{font-size:13px;color:var(--mu)}
+.fb{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--bd)}
+.fbt{font-family:var(--fm);font-size:9px;letter-spacing:.15em;color:var(--di)}
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media(max-width:1100px){
+  .pg,.lgrid{grid-template-columns:repeat(2,1fr)}
+  .tg{grid-template-columns:repeat(3,1fr)}
+  .ti:nth-child(3){border-right:none}
+  .fg2{grid-template-columns:1fr 1fr;gap:40px}
+  .dbody{grid-template-columns:1fr 320px}
+}
+@media(max-width:900px){
+  #nav{padding:0 24px}
+  .nav-links,.nav-cta{display:none}
+  .ham{display:flex}
+  .pl{grid-template-columns:1fr;gap:48px}
+  .pim2{display:none}
+  .al{grid-template-columns:1fr}
+  .aic{height:360px}
+  .abhero{grid-template-columns:1fr}
+  .abhi{height:350px}
+  .abtx{padding:60px 36px}
+  .apply-layout{grid-template-columns:1fr}
+  .apply-left{display:none}
+  .apply-right{padding:40px 24px}
+  .fcg{grid-template-columns:1fr}
+  .fcc{padding:72px 24px}
+  .ptg{grid-template-columns:repeat(2,1fr)}
+  .absg{grid-template-columns:1fr;gap:48px}
+  .dbody{grid-template-columns:1fr}
+  .dsb{position:static;height:auto;border-left:none;border-top:1px solid var(--bd)}
+  .mob-scta{display:flex}
+  .dhc{padding:36px 24px}
+  .dqf{padding:20px 24px;gap:16px;flex-wrap:wrap}
+  .finner{padding:0 16px}
+  .scta{padding:12px 24px}
+  .stxt{display:none}
+  .vals-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .pg,.lgrid{grid-template-columns:1fr}
+  .tg{grid-template-columns:repeat(2,1fr)}
+  .tg3{grid-template-columns:1fr}
+  .cs2{grid-template-columns:1fr}
+  .rg{grid-template-columns:1fr}
+  .sh{flex-direction:column;align-items:flex-start}
+  .fg2{grid-template-columns:1fr;gap:36px}
+  .fb{flex-direction:column;gap:12px;text-align:center}
+  .hctas{flex-direction:column}
+  .msg{grid-template-columns:1fr}
+  .dgal{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+  .dgal .gimg{grid-row:auto;height:220px}
+  .amg{grid-template-columns:repeat(2,1fr)}
+  .cstrip-inner{flex-direction:column;gap:24px}
+  .svc-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- ═══════════════════════ SVG LOGO (inline, reusable) ═══════════════════════ -->
+<!-- Defined once, referenced by <use> everywhere -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="logo-full" viewBox="0 0 320 80">
+    <!-- Top flourish group -->
+    <g fill="none" stroke="#C8A24A" stroke-width="0.8" opacity="0.9">
+      <!-- Horizontal rules -->
+      <line x1="10" y1="28" x2="310" y2="28"/>
+      <line x1="10" y1="31" x2="310" y2="31"/>
+      <!-- Center crown scrollwork -->
+      <path d="M145,28 C145,14 152,8 160,6 C168,8 175,14 175,28"/>
+      <path d="M160,6 C160,2 162,0 164,2 C164,4 162,6 160,6 C158,6 156,4 156,2 C158,0 160,2 160,6"/>
+      <!-- Left scroll cascade -->
+      <path d="M140,28 C138,20 130,16 122,18 C116,20 112,26 114,32 C116,36 120,36 122,34"/>
+      <path d="M122,18 C118,10 110,8 104,12"/>
+      <path d="M104,12 C100,6 94,6 90,10 C88,14 90,18 94,18 C98,18 100,14 98,12"/>
+      <!-- Left leaves -->
+      <path d="M118,22 C114,18 108,18 106,22"/>
+      <path d="M130,20 C128,16 124,16 122,18"/>
+      <!-- Left outer curl -->
+      <path d="M90,10 C84,6 78,8 76,14 C74,20 78,26 84,24 C88,22 88,18 86,16"/>
+      <path d="M76,14 C70,14 66,18 68,24"/>
+      <!-- Right scroll cascade -->
+      <path d="M180,28 C182,20 190,16 198,18 C204,20 208,26 206,32 C204,36 200,36 198,34"/>
+      <path d="M198,18 C202,10 210,8 216,12"/>
+      <path d="M216,12 C220,6 226,6 230,10 C232,14 230,18 226,18 C222,18 220,14 222,12"/>
+      <!-- Right leaves -->
+      <path d="M202,22 C206,18 212,18 214,22"/>
+      <path d="M190,20 C192,16 196,16 198,18"/>
+      <!-- Right outer curl -->
+      <path d="M230,10 C236,6 242,8 244,14 C246,20 242,26 236,24 C232,22 232,18 234,16"/>
+      <path d="M244,14 C250,14 254,18 252,24"/>
+      <!-- Bottom flourish -->
+      <line x1="10" y1="52" x2="310" y2="52"/>
+      <line x1="10" y1="55" x2="310" y2="55"/>
+      <!-- Bottom center drip -->
+      <path d="M145,52 C145,66 152,72 160,74 C168,72 175,66 175,52"/>
+      <path d="M160,74 C160,78 162,80 164,78 C164,76 162,74 160,74 C158,74 156,76 156,78 C158,80 160,78 160,74"/>
+      <!-- Bottom left curl -->
+      <path d="M140,52 C136,60 126,64 116,62 C108,60 104,54 106,48"/>
+      <path d="M116,62 C110,70 100,72 92,68"/>
+      <!-- Bottom right curl -->
+      <path d="M180,52 C184,60 194,64 204,62 C212,60 216,54 214,48"/>
+      <path d="M204,62 C210,70 220,72 228,68"/>
+      <!-- Corner dots -->
+      <circle cx="10" cy="29.5" r="1.5" fill="#C8A24A" stroke="none"/>
+      <circle cx="310" cy="29.5" r="1.5" fill="#C8A24A" stroke="none"/>
+      <circle cx="10" cy="53.5" r="1.5" fill="#C8A24A" stroke="none"/>
+      <circle cx="310" cy="53.5" r="1.5" fill="#C8A24A" stroke="none"/>
+    </g>
+    <!-- Wordmark -->
+    <text x="160" y="44" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="14" font-weight="400" letter-spacing="5" fill="#F3F0EA" text-decoration="none">LUXURY APARTMENTS</text>
+  </symbol>
+
+  <symbol id="logo-mark" viewBox="0 0 52 52">
+    <!-- Compact monogram version -->
+    <rect x="1" y="1" width="50" height="50" fill="none" stroke="#C8A24A" stroke-width="0.8"/>
+    <!-- Corner accents -->
+    <line x1="1" y1="1" x2="8" y2="1" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="1" y1="1" x2="1" y2="8" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="51" y1="1" x2="44" y2="1" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="51" y1="1" x2="51" y2="8" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="1" y1="51" x2="8" y2="51" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="1" y1="51" x2="1" y2="44" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="51" y1="51" x2="44" y2="51" stroke="#C8A24A" stroke-width="1"/>
+    <line x1="51" y1="51" x2="51" y2="44" stroke="#C8A24A" stroke-width="1"/>
+    <!-- LA monogram -->
+    <text x="26" y="33" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="300" letter-spacing="2" fill="#E3C77A">LA</text>
+    <!-- Small rule below text -->
+    <line x1="16" y1="37" x2="36" y2="37" stroke="#C8A24A" stroke-width="0.6" opacity="0.6"/>
+  </symbol>
+</svg>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav id="nav">
+  <div class="nav-logo" onclick="go('home')" data-h>
+    <svg height="44" viewBox="0 0 320 80" style="width:auto"><use href="#logo-full"/></svg>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" onclick="go('listings')" data-h>Properties</a>
+    <a class="nav-link" onclick="go('about')" data-h>About</a>
+    <a class="nav-link" onclick="go('apply')" data-h>Buy in Medellín</a>
+    <a class="nav-link" href="tel:+573137907109" data-h>+57 313 790 7109</a>
+    <a class="nav-cta" onclick="go('apply')" data-h>Request Shortlist</a>
+  </div>
+  <div class="ham" onclick="togMenu()" data-h><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mm">
+  <span class="mob-close" onclick="togMenu()" data-h>✕</span>
+  <a class="nav-link" onclick="go('listings');togMenu()" data-h>Properties</a>
+  <a class="nav-link" onclick="go('about');togMenu()" data-h>About</a>
+  <a class="nav-link" onclick="go('apply');togMenu()" data-h>Buy in Medellín</a>
+  <a class="nav-link" href="tel:+573137907109" data-h>+57 313 790 7109</a>
+  <a class="nav-cta" onclick="go('apply');togMenu()" data-h>Request Shortlist</a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════ -->
+<div class="page active" id="pg-home">
+  <!-- HERO -->
+  <section id="hh">
+    <div class="hbg"></div>
+    <div class="hov-layer"></div>
+    <div class="hc"><div class="wrap">
+      <div class="hq">Curated Luxury · El Poblado · Envigado · Laureles · From $250,000 USD</div>
+      <h1 class="hh1">Medellín's Most<br>Discerning<br><em>Addresses.</em></h1>
+      <p class="hs">Trophy-grade properties, privately curated for foreign buyers. Vetted buildings, bilingual advisory, due diligence included.</p>
+      <div class="hctas">
+        <a class="btn-p" onclick="go('apply')" data-h>Request a Curated Shortlist <span class="arr">→</span></a>
+        <a class="btn-s" onclick="go('listings')" data-h>View Featured Properties</a>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section id="trust">
+    <div class="wrap">
+      <div class="tg reveal">
+        <div class="ti">
+          <div class="ti-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div class="ti-num">30+</div>
+          <div class="ti-lbl">Years<br>Experience</div>
+        </div>
+        <div class="ti">
+          <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="ti-num">EN</div>
+          <div class="ti-lbl">Strong Local<br>Professional Network</div>
+        </div>
+        <div class="ti">
+          <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="ti-num">100%</div>
+          <div class="ti-lbl">Due Diligence<br>Included</div>
+        </div>
+        <div class="ti">
+          <div class="ti-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div class="ti-num">6+</div>
+          <div class="ti-lbl">Service Lines<br>Under One Roof</div>
+        </div>
+        <div class="ti">
+          <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.98 6.88L12 17.77l-5.98 3.25.98-6.88L2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="ti-num">★★★</div>
+          <div class="ti-lbl">Finest Quality<br>Best Places</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PORTFOLIO -->
+  <section id="port">
+    <div class="wrap">
+      <div class="sh reveal">
+        <div>
+          <span class="lbl">Featured Portfolio</span>
+          <h2 class="h-lg">Trophy Inventory,<br><em>Hand-Selected.</em></h2>
+        </div>
+        <a class="btn-s" onclick="go('listings')" data-h>View All Properties <span class="arr">→</span></a>
+      </div>
+      <div class="pg reveal d2" id="home-pg"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="proc">
+    <div class="wrap">
+      <div class="pl">
+        <div>
+          <span class="lbl reveal">The Process</span>
+          <h2 class="h-lg reveal d1">Six Steps.<br><em>Zero Surprises.</em></h2>
+          <div class="rule reveal d2"></div>
+          <p class="bt reveal d2" style="margin-bottom:48px">Every foreign buyer faces the same challenges: unclear title, building issues, legal complexity, language barriers. John Irish has built a process that removes every one of them.</p>
+          <div id="proc-steps">
+            <div class="ps-item reveal d1"><div class="sn">01</div><div><div class="st">Private Inquiry &amp; Shortlist</div><p class="sd">Submit your qualifier. John builds a curated shortlist matched to your exact criteria within 24–48 hours — no browsing irrelevant inventory.</p></div></div>
+            <div class="ps-item reveal d2"><div class="sn">02</div><div><div class="st">Building &amp; Title Verification</div><p class="sd">Every building is pre-screened: HOA finances, construction permits, título de propiedad, litigation status. You only see buildings that have passed.</p></div></div>
+            <div class="ps-item reveal d3"><div class="sn">03</div><div><div class="st">Private Viewing</div><p class="sd">In-person or virtual. John handles scheduling, building access, and your complete walkthrough briefing — including comparables and negotiation room.</p></div></div>
+            <div class="ps-item reveal d4"><div class="sn">04</div><div><div class="st">Legal, Tax &amp; Escrow</div><p class="sd">Legal partners brief you on purchase structure, foreign capital registration, Colombian tax obligations, and escrow via John's in-house title company connections.</p></div></div>
+            <div class="ps-item reveal d5"><div class="sn">05</div><div><div class="st">Offer, Negotiation &amp; Promesa</div><p class="sd">Negotiation, promesa de compraventa, notarial coordination, and lease-to-own financing structures where applicable.</p></div></div>
+            <div class="ps-item reveal d6"><div class="sn">06</div><div><div class="st">Closing &amp; Aftercare</div><p class="sd">Escritura pública, full legal transfer, and ongoing support for property management, STR setup, or future resale strategy.</p></div></div>
+          </div>
+          <div style="margin-top:48px" class="reveal"><a class="btn-p" onclick="go('apply')" data-h>Apply to Start <span class="arr">→</span></a></div>
+        </div>
+        <div>
+          <div class="pim2 reveal">
+            <div class="pim2-bg"></div>
+            <div class="pim2-cap"><p>"The view that convinced us. We flew in for three days and made our decision on day two."</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section id="proof">
+    <div class="wrap">
+      <div class="sh reveal">
+        <div><span class="lbl">Testimonials</span><h2 class="h-lg">Their Words,<br><em>Not Ours.</em></h2></div>
+      </div>
+      <div class="tg3">
+        <div class="tm reveal"><div class="tmq">"I spent six months researching Medellín from Toronto before finding John. The due diligence process alone was worth every penny. We closed in eight weeks."</div><div class="tmd"></div><div class="tma">Michael R. — Toronto, Canada 🇨🇦</div><div class="tmi">3-bed penthouse, El Poblado · $680,000 USD</div></div>
+        <div class="tm reveal d2"><div class="tmq">"As first-time buyers in a foreign country, the legal complexity was intimidating. John's bilingual guidance — from inquiry to escritura — made the difference."</div><div class="tmd"></div><div class="tma">Sarah &amp; James L. — Dublin, Ireland 🇮🇪</div><div class="tmi">4-bed apartment, Envigado · $420,000 USD</div></div>
+        <div class="tm reveal d4"><div class="tmq">"I've bought in four countries. This was the most organised process of all. The shortlist had three properties, all worth seeing. We bought the second one."</div><div class="tmd"></div><div class="tma">Andreas W. — Berlin, Germany 🇩🇪</div><div class="tmi">Penthouse, Laureles · $395,000 USD</div></div>
+      </div>
+      <div class="cs2 reveal d2">
+        <div class="cs"><div class="csn">01</div><div><div class="csp">US Executive · Cash Buyer</div><div class="cst">Needed a Medellín base with STR income potential</div><p class="csd">Submitted qualifier Tuesday. Shortlist by Thursday. Flew in the following weekend. Closed on a 3-bed penthouse with building approval for STR. Total timeline: 11 weeks.</p></div></div>
+        <div class="cs"><div class="csn">02</div><div><div class="csp">Colombian-American · Off-Market</div><div class="cst">Trophy asset with strong resale fundamentals</div><p class="csd">Off-market, pre-launch unit in a premium El Poblado building. Acquisition at $890,000 USD with lease-to-own structure available. Currently valued above purchase price.</p></div></div>
+      </div>
+      <div class="prow reveal">
+        <div class="plbl">Professional Network</div>
+        <div class="plgs">
+          <span class="pnm2" data-h>Gómez &amp; Asociados Legal</span>
+          <span class="pnm2" data-h>Andina Tax Advisory</span>
+          <span class="pnm2" data-h>Relocation Colombia</span>
+          <span class="pnm2" data-h>Bancolombia Private</span>
+          <span class="pnm2" data-h>Arriaga Notaría</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASER (short) -->
+  <section id="abt">
+    <div class="wrap">
+      <div class="al reveal">
+        <div class="aic"><div class="aib"></div><div class="aio"></div></div>
+        <div class="atx">
+          <span class="lbl">About John Irish</span>
+          <div class="aqm">"</div>
+          <h2 class="h-md" style="margin-bottom:24px">I only list what<br><em>I would buy myself.</em></h2>
+          <p class="abt-bio">Irish-born CEO Realtor with 30+ years experience. Based in Medellín for 5+ years, John handles everything foreign buyers need: luxury apartments, property sales, lease-to-own financing, escrow title services, and power of attorney.</p>
+          <a class="btn-s" onclick="go('about')" data-h>Full Story &amp; Values <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYER RESOURCES -->
+  <section id="res">
+    <div class="wrap">
+      <div class="sh reveal">
+        <div><span class="lbl">Buyer Resources</span><h2 class="h-lg">Everything You Need<br><em>to Buy with Confidence.</em></h2></div>
+      </div>
+      <div class="rg">
+        <div class="rc reveal" data-h onclick="go('apply')"><div class="rn">Guide 01</div><div class="rt">How Foreigners Buy Property in Colombia</div><p class="rd">Legal framework — from foreign capital registration to title transfer. Everything you need to buy safely in Medellín.</p><div class="rl">Get the Guide <span>→</span></div></div>
+        <div class="rc reveal d2" data-h onclick="go('apply')"><div class="rn">Guide 02</div><div class="rt">El Poblado vs Envigado vs Laureles: The Honest Comparison</div><p class="rd">Price per m², building quality, walkability, STR rules, and long-term resale fundamentals compared.</p><div class="rl">Read the Guide <span>→</span></div></div>
+        <div class="rc reveal d4" data-h onclick="go('apply')"><div class="rn">Guide 03</div><div class="rt">Colombia Taxes &amp; Closing Costs: What You Actually Pay</div><p class="rd">Notary fees, transfer taxes, Banco de la República registration, impuesto predial — no surprises.</p><div class="rl">See the Numbers <span>→</span></div></div>
+        <div class="rc reveal" data-h onclick="go('apply')"><div class="rn">Guide 04</div><div class="rt">The 7 Due Diligence Checks Before Buying in Medellín</div><p class="rd">Title history, HOA finances, building permits, litigation status, strata classification — what John checks on every property.</p><div class="rl">Download Checklist <span>→</span></div></div>
+        <div class="rc reveal d2" data-h onclick="go('apply')"><div class="rn">Guide 05</div><div class="rt">Lease-to-Own Financing in Colombia: The Full Breakdown</div><p class="rd">A frank guide to lease-to-own structures — how they work, who qualifies, and when they make strategic sense for foreign buyers.</p><div class="rl">Read the Guide <span>→</span></div></div>
+        <div class="rc reveal d4" data-h style="background:linear-gradient(135deg,rgba(200,162,74,.08),transparent);border:1px solid var(--br)" onclick="go('apply')"><div class="rn">Full Guide</div><div class="rt" style="color:var(--cp)">The Complete Foreign Buyer's Guide — Medellín 2025</div><p class="rd">All five guides consolidated into a single 20-page PDF. Free. No sales call required.</p><div class="rl" style="color:var(--cp)">Download Free <span>→</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="fcta">
+    <div class="fcg">
+      <div class="fcc gld reveal">
+        <span class="lbl">High Intent</span>
+        <h2 class="h-md" style="margin-bottom:20px">Ready to See a<br><em>Curated Shortlist?</em></h2>
+        <p class="bt" style="margin-bottom:36px">Complete our 2-minute qualifier. John will build a private shortlist matched to your criteria within 24 hours.</p>
+        <a class="btn-p" onclick="go('apply')" data-h>Apply Now — 2 Minutes <span class="arr">→</span></a>
+        <p class="bt" style="margin-top:16px;font-size:12px">Luxury inventory from $250,000 USD. Every inquiry reviewed personally.</p>
+      </div>
+      <div class="fcc drk reveal d2">
+        <span class="lbl">Not Ready Yet</span>
+        <h2 class="h-md" style="margin-bottom:20px">Download the<br><em>Buyer's Guide First.</em></h2>
+        <p class="bt" style="margin-bottom:36px">Get our complete Foreign Buyer's Guide — legal process, neighbourhoods, taxes, due diligence. Free, no strings.</p>
+        <a class="btn-g" onclick="go('apply')" data-h>Get the Free Guide <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+  <div id="hf"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     LISTINGS PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="pg-listings">
+  <section class="lhero">
+    <div class="wrap">
+      <span class="lbl">Portfolio</span>
+      <h1 class="h-lg" style="margin-bottom:16px">Curated <em>Properties</em></h1>
+      <p class="bt" style="max-width:520px">Every property has been visited, verified, and personally approved by John Irish. Luxury inventory from $250,000 USD.</p>
+    </div>
+  </section>
+  <div class="fbar" id="fbar">
+    <div class="finner">
+      <div class="fi"><span class="fl">Budget</span><select class="fsel" id="fb" onchange="filt()" data-h><option value="all">All</option><option value="lo">$250K – $500K</option><option value="mi">$500K – $800K</option><option value="hi">$800K+</option></select></div>
+      <div class="fi"><span class="fl">Area</span><select class="fsel" id="fn" onchange="filt()" data-h><option value="all">All</option><option value="El Poblado">El Poblado</option><option value="Envigado">Envigado</option><option value="Laureles">Laureles</option><option value="El Retiro">El Retiro</option></select></div>
+      <div class="fi"><span class="fl">Beds</span><select class="fsel" id="fbd" onchange="filt()" data-h><option value="all">All</option><option value="2">2 Beds</option><option value="3">3 Beds</option><option value="4">4 Beds</option><option value="5">5+</option></select></div>
+      <div class="fi"><span class="fl">Type</span><select class="fsel" id="ft" onchange="filt()" data-h><option value="all">All</option><option value="Penthouse">Penthouse</option><option value="Apartment">Apartment</option><option value="Villa">Villa</option></select></div>
+      <div class="fi"><a class="btn-p" onclick="go('apply')" data-h style="white-space:nowrap">Request Shortlist</a></div>
+    </div>
+  </div>
+  <div style="padding:56px 0 96px;background:var(--ob)">
+    <div class="wrap"><div class="lgrid" id="lgrid"></div></div>
+  </div>
+  <div class="scta" id="sctab">
+    <span class="stxt">Not finding what you need? Request a private shortlist.</span>
+    <a class="btn-p" onclick="go('apply')" data-h>Request Shortlist <span class="arr">→</span></a>
+  </div>
+  <div id="lf"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     DETAIL PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="pg-detail">
+  <div id="dc"></div>
+  <div class="mob-scta" id="mob-scta">
+    <a class="btn-p" style="flex:1;justify-content:center" onclick="go('apply')" data-h>Request Viewing</a>
+    <a class="btn-g" href="https://wa.me/573137907109" data-h>WhatsApp</a>
+  </div>
+  <div id="df"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="pg-about">
+  <!-- Hero -->
+  <div class="abhero">
+    <div class="abhi"><div class="abhib"></div><div class="abhio"></div></div>
+    <div class="abtx">
+      <span class="lbl">John Irish · CEO Realtor</span>
+      <h1 class="h-lg" style="margin-bottom:24px">I came to Medellín<br>and chose to <em>stay.</em></h1>
+      <div class="rule"></div>
+      <p class="bt">Five years building the connections, the network, and the standards that make this process work for you — not just for the market.</p>
+    </div>
+  </div>
+
+  <!-- Contact strip -->
+  <div class="contact-strip">
+    <div class="cstrip-inner">
+      <div class="csi">
+        <div class="csi-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><polyline points="2,3 12,13 22,3"/></svg></div>
+        <div><div class="csi-label">Email</div><div class="csi-val">johnirish35@gmail.com</div></div>
+      </div>
+      <div class="csi">
+        <div class="csi-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div><div class="csi-label">WhatsApp</div><div class="csi-val">+57 313 790 7109</div></div>
+      </div>
+      <div class="csi">
+        <div class="csi-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div><div class="csi-label">Market</div><div class="csi-val">Medellín, Antioquia, Colombia</div></div>
+      </div>
+      <div class="csi">
+        <div class="csi-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div><div class="csi-label">Title</div><div class="csi-val">CEO Realtor · Luxury Apartments</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <section class="ab-story">
+    <div class="wrap">
+      <div class="absg">
+        <div class="abs-text reveal">
+          <span class="lbl">The Story</span>
+          <p>I came to Medellín the way most of my clients do — drawn by the climate, the energy, and a quality of life that simply doesn't exist at the same price point anywhere else in the world. I came for a short stay. I stayed for five years and counting.</p>
+          <p>In those first years I learned the market from the inside — as a buyer, as a tenant, and eventually as someone who started helping other English-speaking foreigners navigate the same process I'd stumbled through myself. What I found was a consistent gap: plenty of local agents, almost none with the combination of English fluency, genuine market knowledge, and a network strong enough to get things done properly.</p>
+          <p>I built Luxury Apartments Medellín to fill that gap. Today our practice covers everything a foreign buyer needs under one roof: luxury apartments, commercial leases, property sales, lease-to-own financing, escrow title services, and power of attorney for clients who need a trusted local representative.</p>
+          <p>The English-speaking professional network I've built in this city is one of our strongest assets — it means faster due diligence, better legal briefings, and off-market access that most buyers never see.</p>
+          <p style="margin-bottom:0"><em style="font-family:var(--fs);color:var(--cp);font-size:17px">— John Irish, CEO Realtor</em></p>
+        </div>
+        <div class="reveal d2">
+          <span class="lbl">Services</span>
+          <p class="bt" style="margin-bottom:20px">Everything a foreign buyer needs, handled under one roof by a trusted bilingual advisor.</p>
+          <div class="svc-grid">
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Luxury Apartments</div></div>
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Commercial Leases</div></div>
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Property Sales</div></div>
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Lease to Own Financing</div></div>
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Escrow Title Company</div></div>
+            <div class="svc-item"><div class="svc-dot"></div><div class="svc-name">Power of Attorney</div></div>
+          </div>
+          <div style="margin-top:40px;padding:24px;background:var(--sf);border:1px solid var(--bd)">
+            <div class="lbl" style="margin-bottom:12px">Direct Contact</div>
+            <p class="bt" style="font-size:13px;margin-bottom:16px">All enquiries are reviewed personally by John.</p>
+            <a href="https://wa.me/573137907109" class="btn-p" data-h style="font-size:9px">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              WhatsApp: +57 313 790 7109
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="ab-vals">
+    <div class="wrap">
+      <span class="lbl reveal">The Standard</span>
+      <h2 class="h-lg reveal d1" style="max-width:600px">What Every Client<br><em>Can Expect.</em></h2>
+      <p class="bt reveal d2" style="max-width:560px;margin-top:16px">These are not aspirations. They are the minimum standard that every engagement is held to — because the alternative is exactly the market problem we exist to solve.</p>
+      <div class="vals-grid reveal d2">
+        <div class="val-card" data-num="01">
+          <div class="val-num">Standard 01</div>
+          <div class="val-title">I only show what I would buy myself.</div>
+          <p class="val-text">Every property in our portfolio has been physically visited and personally assessed before any client sees it. We reject approximately 80% of properties we view — because presenting something mediocre wastes everyone's time and tells you nothing about our judgement.</p>
+        </div>
+        <div class="val-card" data-num="02">
+          <div class="val-num">Standard 02</div>
+          <div class="val-title">Due diligence is never optional.</div>
+          <p class="val-text">Title history, HOA financial health, building permits, developer track record, strata classification, litigation status — these checks happen before you see a property. Not after. The building you buy needs to be as sound as the apartment you're walking through.</p>
+        </div>
+        <div class="val-card" data-num="03">
+          <div class="val-title">Transparency over commission.</div>
+          <div class="val-num" style="margin-top:12px">Standard 03</div>
+          <p class="val-text">When there is a reason to hesitate on a property, you will hear it from me first. Our long-term business depends entirely on clients who got exactly what they expected — or better. A commission earned on a bad transaction costs far more than it is worth.</p>
+        </div>
+        <div class="val-card" data-num="04">
+          <div class="val-title">Speed matters as much as quality.</div>
+          <div class="val-num" style="margin-top:12px">Standard 04</div>
+          <p class="val-text">Good properties in Medellín move fast. Qualified buyers who have their documentation ready, their criteria clear, and a trusted advisor who can act — those are the buyers who close. Part of my job is making sure you are positioned to move when the right thing appears.</p>
+        </div>
+        <div class="val-card" data-num="05">
+          <div class="val-title">Discretion is a standard, not a feature.</div>
+          <div class="val-num" style="margin-top:12px">Standard 05</div>
+          <p class="val-text">Premium transactions involve sensitive financial information and personal circumstances. Confidentiality is absolute. Off-market properties are presented privately. Negotiations are conducted without unnecessary parties. Your business remains your business.</p>
+        </div>
+        <div class="val-card" data-num="06">
+          <div class="val-title">The relationship continues after closing.</div>
+          <div class="val-num" style="margin-top:12px">Standard 06</div>
+          <p class="val-text">The closing is not the end of the engagement — it is the beginning of a longer relationship. Property management referrals, STR setup, lease management, future resale strategy — all of this is available through the same network that handled your purchase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="ab-partners">
+    <div class="wrap">
+      <span class="lbl reveal">Professional Network</span>
+      <h2 class="h-lg reveal d1" style="margin-bottom:0">The People Who Make<br><em>Your Purchase Secure.</em></h2>
+      <div class="ptg reveal d2">
+        <div class="ptc"><div class="pttype">Legal</div><div class="ptnm">Gómez &amp; Asociados</div><p class="ptd">Real estate specialists with 20+ years handling foreign buyer transactions, title review, and notarial coordination.</p></div>
+        <div class="ptc"><div class="pttype">Tax &amp; Accounting</div><div class="ptnm">Andina Tax Advisory</div><p class="ptd">Cross-border tax planning for foreign buyers — Colombian compliance, Banco de la República capital registration, repatriation structures.</p></div>
+        <div class="ptc"><div class="pttype">Relocation</div><div class="ptnm">Relocation Colombia</div><p class="ptd">Visa coordination, immigration advisory, school placements, and full concierge relocation services for buyers transitioning to Medellín.</p></div>
+        <div class="ptc"><div class="pttype">Private Banking</div><div class="ptnm">Bancolombia Private</div><p class="ptd">Private banking, mortgage advisory for Colombian residents, and foreign currency exchange at institutional rates.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="ab-tms">
+    <div class="wrap">
+      <span class="lbl reveal">Client Testimonials</span>
+      <h2 class="h-lg reveal d1" style="margin-bottom:56px">What Clients<br><em>Say After Closing.</em></h2>
+      <div class="tg3">
+        <div class="tm reveal"><div class="tmq">"The shortlist had three properties. All three were worth seeing. We bought one. That ratio tells you everything about the curation."</div><div class="tmd"></div><div class="tma">James K. — London, UK 🇬🇧</div><div class="tmi">Penthouse, El Poblado · $780,000 USD</div></div>
+        <div class="tm reveal d2"><div class="tmq">"We had concerns about buying as non-residents. Every single question was answered before we asked it. The process was entirely clear."</div><div class="tmd"></div><div class="tma">Elena &amp; Marco D. — Milan, Italy 🇮🇹</div><div class="tmi">3-bed apartment, Envigado · $390,000 USD</div></div>
+        <div class="tm reveal d4"><div class="tmq">"I received exactly one shortlist. Four properties. I bought the second one. No time wasted. That's the point."</div><div class="tmd"></div><div class="tma">David M. — New York, USA 🇺🇸</div><div class="tmi">Villa, El Retiro · $1,100,000 USD</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-cta">
+    <div class="wrap">
+      <span class="lbl">Work With John</span>
+      <h2 class="h-lg" style="margin-bottom:20px">Apply to Start the<br><em>Conversation.</em></h2>
+      <p class="bt" style="max-width:420px;margin:0 auto 40px">John takes on a limited number of new clients. If the criteria align, you'll have a curated shortlist within 24 hours.</p>
+      <a class="btn-p" onclick="go('apply')" data-h>Apply Now <span class="arr">→</span></a>
+    </div>
+  </section>
+  <div id="af"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     REQUEST / PROCESS PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="pg-request">
+  <section style="padding:96px 0;background:var(--ch);border-bottom:1px solid var(--bd);padding-top:120px">
+    <div class="wrap">
+      <span class="lbl reveal">The Process</span>
+      <h1 class="h-lg reveal d1">Four Simple<br><em>Steps to Your Home.</em></h1>
+      <p class="bt reveal d2" style="max-width:560px;margin-top:16px">Every property shortlist comes with full due diligence. Your private application gets reviewed by John personally within 24–48 hours.</p>
+    </div>
+  </section>
+  <section style="padding:96px 0;background:var(--ob)">
+    <div class="wrap">
+      <div class="pl">
+        <div>
+          <div id="req-steps">
+            <div class="ps-item reveal d1"><div class="sn">01</div><div><div class="st">Contact Information</div><p class="sd">Share your name, email, and WhatsApp. All inquiries go directly to John — no bots, no spam.</p></div></div>
+            <div class="ps-item reveal d2"><div class="sn">02</div><div><div class="st">Intent &amp; Readiness</div><p class="sd">Tell us your funding method, timeline, and whether you're in Colombia. This helps us qualify your fit for our process.</p></div></div>
+            <div class="ps-item reveal d3"><div class="sn">03</div><div><div class="st">Budget &amp; Criteria</div><p class="sd">Set your budget range, preferred neighbourhoods, and must-have features. Every shortlist is matched to your exact criteria.</p></div></div>
+            <div class="ps-item reveal d4"><div class="sn">04</div><div><div class="st">Deal Intelligence</div><p class="sd">Flag any blockers and let us know if you can provide proof of funds. This ensures smooth processing when the right property appears.</p></div></div>
+          </div>
+          <div style="margin-top:48px" class="reveal"><a class="btn-p" onclick="go('apply')" data-h>Start Your Application <span class="arr">→</span></a></div>
+        </div>
+        <div>
+          <div class="pim2 reveal d2">
+            <div class="pim2-bg" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85')"></div>
+            <div class="pim2-cap"><p>"The shortlist process is simple. We do the heavy lifting. You just say yes or no."</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="rf"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     APPLY PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="pg-apply">
+  <div class="apply-layout">
+    <div class="apply-left">
+      <div>
+        <svg height="52" viewBox="0 0 320 80" style="width:auto;margin-bottom:32px"><use href="#logo-full"/></svg>
+        <span class="lbl">Private Inquiry</span>
+        <h1 class="h-md" style="margin-bottom:20px">Request a<br><em>Curated Shortlist.</em></h1>
+        <p class="bt">Complete this short qualifier. John reviews every inquiry personally and builds a private shortlist within 24–48 hours. Luxury inventory from $250,000 USD.</p>
+      </div>
+      <div class="al-info">
+        <div class="ali"><div class="ali-n">01</div><div class="ali-t"><strong>2-minute qualifier</strong>Four short steps. No time-wasters, no spam.</div></div>
+        <div class="ali"><div class="ali-n">02</div><div class="ali-t"><strong>Personal review</strong>Every application is read by John, not a bot.</div></div>
+        <div class="ali"><div class="ali-n">03</div><div class="ali-t"><strong>Shortlist in 24–48h</strong>Matched to your exact criteria, budget, and timeline.</div></div>
+        <div class="ali"><div class="ali-n">04</div><div class="ali-t"><strong>Hot leads scheduled immediately</strong>Score ≥ 80 unlocks a scheduling link on your confirmation screen.</div></div>
+      </div>
+      <div class="al-img"><div class="al-img-bg"></div></div>
+    </div>
+    <div class="apply-right">
+      <!-- Step nav tabs -->
+      <div class="steps-nav" id="stabs">
+        <div class="step-tab curr" id="stab1"><div class="step-tab-num">01</div><div class="step-tab-lbl">Contact</div></div>
+        <div class="step-tab" id="stab2"><div class="step-tab-num">02</div><div class="step-tab-lbl">Intent</div></div>
+        <div class="step-tab" id="stab3"><div class="step-tab-num">03</div><div class="step-tab-lbl">Budget</div></div>
+        <div class="step-tab" id="stab4"><div class="step-tab-num">04</div><div class="step-tab-lbl">Details</div></div>
+      </div>
+      <div class="fpb"><div class="fpf" id="fpf" style="width:0%"></div></div>
+
+      <!-- Step 1 -->
+      <div class="fsc active" id="fs1">
+        <div><div class="fslbl">Step 1 of 4</div><div class="fstt">Contact<br>Information</div><p class="fssb">This goes directly to John. No third parties.</p></div>
+        <div class="fg"><label class="flbl">Full Name</label><input class="finp" id="fn" type="text" placeholder="Your full name" data-h></div>
+        <div class="fg"><label class="flbl">Email Address</label><input class="finp" id="fe" type="email" placeholder="your@email.com" data-h></div>
+        <div class="fg"><label class="flbl">WhatsApp (with country code)</label><input class="finp" id="fw" type="tel" placeholder="+1 555 000 0000" data-h></div>
+        <div class="fnav"><button class="btn-p" onclick="nxt(2)" data-h>Continue <span class="arr">→</span></button></div>
+        <div class="find">Step 1 of 4</div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="fsc" id="fs2">
+        <div><div class="fslbl">Step 2 of 4</div><div class="fstt">Intent &amp;<br>Readiness</div></div>
+        <div class="fg">
+          <label class="flbl">How do you plan to fund this purchase?</label>
+          <div class="rg2" id="rg-fund">
+            <div class="ro" onclick="selR('rg-fund',this,'cash')" data-h><div class="rdot"></div><span class="rtxt">Cash buyer — funds are ready</span></div>
+            <div class="ro" onclick="selR('rg-fund',this,'mortgage')" data-h><div class="rdot"></div><span class="rtxt">Mortgage / Financing</span></div>
+            <div class="ro" onclick="selR('rg-fund',this,'fund')" data-h><div class="rdot"></div><span class="rtxt">Investment fund / corporate</span></div>
+            <div class="ro" onclick="selR('rg-fund',this,'lto')" data-h><div class="rdot"></div><span class="rtxt">Interested in Lease-to-Own</span></div>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="flbl">When are you planning to buy?</label>
+          <div class="rg2" id="rg-time">
+            <div class="ro" onclick="selR('rg-time',this,'30d')" data-h><div class="rdot"></div><span class="rtxt">Within the next 30 days</span></div>
+            <div class="ro" onclick="selR('rg-time',this,'1-3m')" data-h><div class="rdot"></div><span class="rtxt">1–3 months</span></div>
+            <div class="ro" onclick="selR('rg-time',this,'3-6m')" data-h><div class="rdot"></div><span class="rtxt">3–6 months</span></div>
+            <div class="ro" onclick="selR('rg-time',this,'6plus')" data-h><div class="rdot"></div><span class="rtxt">6–12 months</span></div>
+            <div class="ro" onclick="selR('rg-time',this,'exp')" data-h><div class="rdot"></div><span class="rtxt">Just exploring for now</span></div>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="flbl">Currently in Colombia or visiting within 30 days?</label>
+          <div class="rg2" id="rg-col" style="flex-direction:row;gap:10px">
+            <div class="ro" onclick="selR('rg-col',this,'yes')" data-h style="flex:1"><div class="rdot"></div><span class="rtxt">Yes</span></div>
+            <div class="ro" onclick="selR('rg-col',this,'no')" data-h style="flex:1"><div class="rdot"></div><span class="rtxt">Not yet</span></div>
+          </div>
+        </div>
+        <div class="fnav"><button class="fbk" onclick="nxt(1)" data-h>← Back</button><button class="btn-p" onclick="nxt(3)" data-h>Continue <span class="arr">→</span></button></div>
+        <div class="find">Step 2 of 4</div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="fsc" id="fs3">
+        <div><div class="fslbl">Step 3 of 4</div><div class="fstt">Budget &amp;<br>Criteria</div></div>
+        <div class="fg">
+          <label class="flbl">Target Budget (USD)</label>
+          <select class="fsel2" id="fbudget" data-h>
+            <option value="">Select your budget range</option>
+            <option value="150-300">$150,000 – $300,000</option>
+            <option value="300-500">$300,000 – $500,000</option>
+            <option value="500-800">$500,000 – $800,000</option>
+            <option value="800-1200">$800,000 – $1,200,000</option>
+            <option value="1200plus">$1,200,000+</option>
+            <option value="pref">Prefer not to say</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="flbl">Preferred Neighbourhood(s)</label>
+          <div class="msg" id="cg-nb">
+            <div class="co" onclick="togC(this,'El Poblado')" data-h><div class="cbox"></div><span class="ctxt">El Poblado</span></div>
+            <div class="co" onclick="togC(this,'Envigado')" data-h><div class="cbox"></div><span class="ctxt">Envigado</span></div>
+            <div class="co" onclick="togC(this,'Laureles')" data-h><div class="cbox"></div><span class="ctxt">Laureles</span></div>
+            <div class="co" onclick="togC(this,'El Retiro')" data-h><div class="cbox"></div><span class="ctxt">El Retiro</span></div>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="flbl">Must-Haves</label>
+          <div class="msg" id="cg-mh">
+            <div class="co" onclick="togC(this,'view')" data-h><div class="cbox"></div><span class="ctxt">City / Mountain View</span></div>
+            <div class="co" onclick="togC(this,'terrace')" data-h><div class="cbox"></div><span class="ctxt">Private Terrace</span></div>
+            <div class="co" onclick="togC(this,'pool')" data-h><div class="cbox"></div><span class="ctxt">Pool / Gym</span></div>
+            <div class="co" onclick="togC(this,'security')" data-h><div class="cbox"></div><span class="ctxt">24h Security</span></div>
+            <div class="co" onclick="togC(this,'parking')" data-h><div class="cbox"></div><span class="ctxt">Parking (2+)</span></div>
+            <div class="co" onclick="togC(this,'str')" data-h><div class="cbox"></div><span class="ctxt">STR Allowed</span></div>
+          </div>
+        </div>
+        <div class="fnav"><button class="fbk" onclick="nxt(2)" data-h>← Back</button><button class="btn-p" onclick="nxt(4)" data-h>Continue <span class="arr">→</span></button></div>
+        <div class="find">Step 3 of 4</div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="fsc" id="fs4">
+        <div><div class="fslbl">Step 4 of 4</div><div class="fstt">Deal<br>Intelligence</div></div>
+        <div class="fg"><label class="flbl">Anything that could delay your purchase? (Optional)</label><textarea class="ftarea" id="fblk" placeholder="E.g. need to sell first, waiting on funds, family decision pending..." data-h></textarea></div>
+        <div class="fg">
+          <label class="flbl">Can you provide proof of funds or a bank letter?</label>
+          <div class="rg2" id="rg-pof">
+            <div class="ro" onclick="selR('rg-pof',this,'uploaded')" data-h><div class="rdot"></div><span class="rtxt">Yes — I'll upload now</span></div>
+            <div class="ro" onclick="selR('rg-pof',this,'request')" data-h><div class="rdot"></div><span class="rtxt">Yes — upon request</span></div>
+            <div class="ro" onclick="selR('rg-pof',this,'no')" data-h><div class="rdot"></div><span class="rtxt">Not at this stage</span></div>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="flbl" style="display:flex;align-items:flex-start;gap:10px;cursor:none" data-h onclick="togCon()">
+            <div class="cbox" id="conb" style="flex-shrink:0;margin-top:2px"></div>
+            <span style="font-family:var(--fn);font-size:12px;color:var(--mu);font-weight:300;letter-spacing:0;text-transform:none">I agree to be contacted by email and WhatsApp. John does not share your information with third parties.</span>
+          </label>
+        </div>
+        <div class="fnav"><button class="fbk" onclick="nxt(3)" data-h>← Back</button><button class="btn-p" onclick="sub()" data-h>Submit Inquiry <span class="arr">→</span></button></div>
+        <div class="find">Step 4 of 4</div>
+      </div>
+
+      <!-- Result -->
+      <div class="fr" id="fres"></div>
+    </div>
+  </div>
+  <div id="apf"></div>
+</div>
+
+<!-- FOOTER TEMPLATE -->
+<template id="ft">
+<footer>
+  <div class="wrap">
+    <div class="fg2">
+      <div>
+        <div class="fb-lgo">
+          <svg height="40" viewBox="0 0 320 80" style="width:auto"><use href="#logo-full"/></svg>
+        </div>
+        <p class="fb-desc">John Irish · CEO Realtor. Trophy-grade properties in Medellín, privately curated for foreign buyers. Bilingual advisory, full due diligence, lease-to-own financing.</p>
+        <a class="btn-s" onclick="go('apply')" data-h style="font-size:9px">Request a Shortlist <span class="arr">→</span></a>
+      </div>
+      <div>
+        <div class="fct">Pages</div>
+        <ul class="fl2">
+          <li><a onclick="go('home')" data-h>Home</a></li>
+          <li><a onclick="go('listings')" data-h>Properties</a></li>
+          <li><a onclick="go('about')" data-h>About John</a></li>
+          <li><a onclick="go('apply')" data-h>Apply</a></li>
+          <li><a onclick="go('apply')" data-h>Foreign Buyer Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Neighbourhoods</div>
+        <ul class="fl2">
+          <li><a data-h>El Poblado</a></li>
+          <li><a data-h>Envigado</a></li>
+          <li><a data-h>Laureles</a></li>
+          <li><a data-h>El Retiro</a></li>
+          <li><a data-h>La Ceja</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Contact</div>
+        <div class="fci"><span class="fcil">WhatsApp</span><span class="fciv">+57 313 790 7109</span></div>
+        <div class="fci"><span class="fcil">Email</span><span class="fciv">johnirish35@gmail.com</span></div>
+        <div class="fci"><span class="fcil">Market</span><span class="fciv">Medellín, Antioquia</span></div>
+        <div class="fci"><span class="fcil">Languages</span><span class="fciv">English · Español</span></div>
+      </div>
+    </div>
+    <div class="fb">
+      <span class="fbt">© 2025 Luxury Apartments Medellín · John Irish · CEO Realtor</span>
+      <span class="fbt">From $250,000 USD · Private Inquiry Only</span>
+    </div>
+  </div>
+</footer>
+</template>
+
+<!-- ══════════════════════════ JS ══════════════════════════ -->
+<script>
+/* DATA */
+const props=[
+  {id:'pa',name:'Penthouse Alto',nb:'El Poblado',type:'Penthouse',beds:4,baths:4,sqm:350,floor:'28th',usd:890000,pd:'$890,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Penthouse',img:'https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80'],why:['360° panoramic views from three terraces totalling 180m²','Architect-designed kitchen — Gaggenau appliances, stone surfaces','Building verified: HOA fully funded, zero litigation, Certificado de Ocupación confirmed','Private elevator access, 3 parking spaces, dedicated storage floor','Developer: Conconcreto — 40+ premium buildings in Medellín','STR permitted by co-propiedad — strong Airbnb income validated'],amen:['Rooftop Pool','Concierge 24h','Gym','Business Centre','Pet Friendly','Visitor Parking','Private Generator','EV Charging'],dd:['Title clear — 3 generations','HOA fund: COP 450M reserve','Certificate of Occupancy confirmed','Zero active litigation','Building permits: complete','Strata 6 — El Poblado'],desc:'An exceptional opportunity in one of El Poblado\'s most prestigious buildings. The penthouse occupies the entire 28th floor with views extending from Cerro Nutibara to the Eastern Cordillera.',admin:'Admin: COP 2.8M / month'},
+  {id:'rc',name:'Residencia Cielo',nb:'Envigado',type:'Apartment',beds:3,baths:3,sqm:220,floor:'14th',usd:420000,pd:'$420,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80'],why:['Enviable position — Envigado\'s best-regarded residential building with consistent resale premium','Generous 220m² layout — no wasted corridors or dark rooms','Kitchen fully renovated 2023 — Italian cabinetry, Miele appliances, marble island','Master suite with mountain view, walk-in wardrobe, spa-standard bathroom','Quieter neighbourhood — walkable to best restaurants and cafés','Clean title, well-maintained building, proactive HOA board'],amen:['Pool','Gym','Security 24h','Children\'s Play Area','BBQ Zone','Parking x2','Storage Unit','Social Room'],dd:['Title clear — 2 previous owners','HOA fund: COP 180M reserve','Certificate of Occupancy confirmed','Zero active litigation','Strata 5 — Envigado','Building completed 2017'],desc:'A rare combination of generous space, prime Envigado location, and building quality that genuinely holds value. Popular with foreign buyers who prefer Envigado\'s character over El Poblado.',admin:'Admin: COP 1.4M / month'},
+  {id:'af',name:'Apartamento Flora',nb:'El Poblado',type:'Apartment',beds:3,baths:3,sqm:280,floor:'19th',usd:680000,pd:'$680,000',tags:['Verified','Off-Market'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80'],why:['Off-market — not publicly listed, available exclusively through private inquiry','Exceptional value vs comparable units currently listed in the same building','Triple-aspect layout — morning sun in kitchen and master, afternoon sun in living room','Fully furnished to high standard — available with or without furniture package','Proven rental history: COP 12M/month average (Airbnb + long-term)','Motivated seller — clean transaction, full documentation ready'],amen:['Infinity Pool','Concierge','Gym','Spa','Restaurant','Parking x2','Wine Cellar','Sky Lounge'],dd:['Title clear — single previous owner','HOA fund: COP 320M reserve','Certificate of Occupancy confirmed','Zero active litigation','All admin fees current','Strata 6 — El Poblado premium'],desc:'An off-market opportunity in one of El Poblado\'s most coveted buildings. Available exclusively to clients who apply through our inquiry process. Full dossier provided on qualification.',admin:'Admin: COP 2.1M / month'},
+  {id:'vj',name:'Villa Jardín',nb:'El Retiro',type:'Villa',beds:5,baths:5,sqm:600,floor:'G + 2',usd:1200000,pd:'$1,200,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Villa',img:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=700&q=80'],why:['Standalone villa on 2,400m² private gardens with uninterrupted valley views','Pool, outdoor kitchen, and separate guest/staff quarters on-site','El Retiro offers altitude, climate, and privacy unavailable in Medellín city proper','Private gated access, full perimeter security, dedicated maintenance staff','Lease-to-own structure available through John Irish\'s in-house financing','Clean title, no encumbrances — family sale with full documentation ready'],amen:['Private Pool','Outdoor Kitchen','Guest House','Garage x4','Private Gardens','Mountain Views','Staff Quarters','Gated Access'],dd:['Title clear — family owned 25 years','No HOA — private property','Building permits: complete','Zero active litigation','Environmental permit confirmed','Rural cadastral record verified'],desc:'A landmark villa in the hills above El Retiro, offering genuine privacy, a private pool, and grounds that create a sense of estate. An hour from the city, a world apart.',admin:'Private property — no HOA fee'},
+  {id:'tn',name:'Torre Nordika',nb:'Laureles',type:'Apartment',beds:2,baths:2,sqm:180,floor:'10th',usd:350000,pd:'$350,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=700&q=80'],why:['Best value entry to Laureles — consistently strong demand from long-stay expats','Laureles offers the authentic Medellín neighbourhood experience absent in El Poblado','New building (2021) — minimal maintenance costs expected for 10+ years','Efficient 180m² — optimal two-bedroom configuration, no space wasted','High owner-occupancy ratio: signals quality and community stability','Excellent resale liquidity — Laureles maintains consistent buyer demand'],amen:['Pool','Gym','Security 24h','Coworking Space','Rooftop Terrace','Parking x1','Pet Friendly','Bike Storage'],dd:['Title clear — developer to first buyer','HOA fund: well-capitalised','Certificate of Occupancy 2021','Zero litigation history','Strata 5 — Laureles','All fees current'],desc:'A well-specified apartment in Laureles\'s most compelling new building. For buyers prioritising authentic neighbourhood living, rental yield, and entry value.',admin:'Admin: COP 1.1M / month'},
+  {id:'pd',name:'Penthouse Dorado',nb:'El Poblado',type:'Penthouse',beds:4,baths:5,sqm:420,floor:'32nd + 33rd',usd:1450000,pd:'$1,450,000',tags:['Off-Market','Foreign-Buyer Safe'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1560185007-5f0bb1866cab?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=700&q=80'],why:['Duplex penthouse — 420m² across two levels with private rooftop and plunge pool','No equivalent on the market: only duplex penthouse currently off-market in El Poblado','Designed by architect Juan Mesa — custom finishes, no developer-standard materials','Private rooftop with 360° views, built-in BBQ, 140m² outdoor living area','UHNW standard: wine cellar, home cinema, staff quarters, smart-home throughout','Discreet sale — full dossier only after qualification. Motivated seller, clean transaction.'],amen:['Private Rooftop Pool','Home Cinema','Wine Cellar','Staff Quarters','Private Gym','Concierge 24h','Helipad Access','4 Parking Spaces'],dd:['Title clear — architect-owner','HOA fully funded','Certificate of Occupancy confirmed','Zero active litigation','All permits including rooftop','Strata 6 — El Poblado prime'],desc:'The most exceptional residential property currently available in Medellín. A bespoke duplex penthouse designed and owned by its architect, available exclusively through private inquiry.',admin:'Admin: COP 3.6M / month'}
+];
+
+/* FORM STATE */
+let fd={name:'',email:'',wa:'',fund:'',tl:'',col:'',budget:'',nb:[],mh:[],blk:'',pof:'',con:false};
+let con=false,cstep=1;
+
+/* CURSOR */
+const C=document.getElementById('cur'),CR=document.getElementById('cur-r');
+let cx=0,cy=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;C.style.left=cx+'px';C.style.top=cy+'px'});
+(function anim(){rx+=(cx-rx)*.12;ry+=(cy-ry)*.12;CR.style.left=rx+'px';CR.style.top=ry+'px';requestAnimationFrame(anim)})();
+function bindH(){
+  document.querySelectorAll('[data-h]').forEach(el=>{
+    el.onmouseenter=()=>document.body.classList.add('hov');
+    el.onmouseleave=()=>document.body.classList.remove('hov');
+  });
+}
+document.addEventListener('mouseleave',()=>{C.style.opacity='0';CR.style.opacity='0'});
+document.addEventListener('mouseenter',()=>{C.style.opacity='1';CR.style.opacity='1'});
+
+/* NAV */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('sc',scrollY>60);
+  const s=document.getElementById('sctab');
+  if(s)s.classList.toggle('show',scrollY>400);
+});
+function togMenu(){document.getElementById('mm').classList.toggle('open')}
+
+/* REVEAL */
+function rev(){
+  document.querySelectorAll('.reveal:not(.vis)').forEach(el=>{
+    const r=el.getBoundingClientRect();
+    if(r.top<window.innerHeight*.92)el.classList.add('vis');
+  });
+}
+window.addEventListener('scroll',rev,{passive:true});
+
+/* ROUTING */
+function go(pid,propId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  window.scrollTo({top:0,behavior:'instant'});
+  const pg=document.getElementById('pg-'+pid);
+  if(pg)pg.classList.add('active');
+  if(pid==='home')renderHome();
+  if(pid==='listings')renderListings(props);
+  if(pid==='detail'&&propId)renderDetail(propId);
+  // inject footers
+  ['h','l','d','a','r','ap'].forEach(id=>{
+    const ph=document.getElementById(id==='h'?'hf':id==='l'?'lf':id==='d'?'df':id==='a'?'af':id==='r'?'rf':'apf');
+    if(ph&&!ph.dataset.f){ph.dataset.f='1';ph.innerHTML=document.getElementById('ft').innerHTML;}
+  });
+  setTimeout(()=>{rev();bindH()},60);
+}
+
+/* HOME FEATURED */
+function renderHome(){
+  const g=document.getElementById('home-pg');
+  if(!g||g.dataset.f)return;
+  g.dataset.f='1';
+  g.innerHTML=props.slice(0,6).map(p=>`
+    <div class="pc" onclick="go('detail','${p.id}')" data-h>
+      <div class="pim"><div class="pii" style="background-image:url('${p.img}')"></div>
+      <div class="pbdg">${p.badge}</div>
+      <div class="pov"><div class="pov-b">View Property</div></div></div>
+      <div class="pi"><div class="pnb">${p.nb}</div><div class="pnm">${p.name}</div>
+      <div class="psp"><span class="ps"><span>${p.beds}</span> Beds</span><span class="ps"><span>${p.sqm}m²</span></span><span class="ps">Floor <span>${p.floor}</span></span></div>
+      <div class="pft"><div><span class="ppl">From</span><div class="ppr">${p.pd}</div></div>
+      <div class="prq" data-h>Request Details <span>→</span></div></div></div>
+    </div>`).join('');
+  bindH();
+}
+
+/* LISTINGS */
+function renderListings(list){
+  const g=document.getElementById('lgrid');
+  if(!g)return;
+  if(!list.length){
+    g.innerHTML=`<div style="grid-column:1/-1;padding:80px;text-align:center"><p class="bt">No properties match. <a onclick="resetF()" style="color:var(--gd);cursor:none;text-decoration:underline">Reset filters</a> or <a onclick="go('apply')" style="color:var(--gd);cursor:none;text-decoration:underline">request a shortlist</a>.</p></div>`;
+    return;
+  }
+  g.innerHTML=list.map(p=>`
+    <div class="lcard" onclick="go('detail','${p.id}')" data-h>
+      <div class="lcim"><div class="lcii" style="background-image:url('${p.img}')"></div>
+      <div class="ltags">${p.tags.map(t=>`<span class="ltag ${t==='Off-Market'?'om':''}">${t}</span>`).join('')}</div>
+      <div class="lstatus"></div></div>
+      <div class="linfo"><div class="lnb">${p.nb}</div><div class="lnm">${p.name}</div>
+      <div class="lsps"><span class="lsp"><strong>${p.beds}</strong> Beds</span><span class="lsp"><strong>${p.baths}</strong> Baths</span><span class="lsp"><strong>${p.sqm}m²</strong></span><span class="lsp">Floor <strong>${p.floor}</strong></span></div>
+      <div class="lft"><div><div class="lpf">From</div><div class="lpv">${p.pd}</div></div>
+      <div class="ldb" data-h>View Details</div></div></div>
+    </div>`).join('');
+  bindH();
+}
+function filt(){
+  const b=document.getElementById('fb').value,n=document.getElementById('fn').value,
+    bd=document.getElementById('fbd').value,t=document.getElementById('ft').value;
+  let l=[...props];
+  if(b!=='all'){if(b==='lo')l=l.filter(p=>p.usd<=500000);if(b==='mi')l=l.filter(p=>p.usd>500000&&p.usd<=800000);if(b==='hi')l=l.filter(p=>p.usd>800000);}
+  if(n!=='all')l=l.filter(p=>p.nb===n);
+  if(bd!=='all')l=l.filter(p=>bd==='5'?p.beds>=5:p.beds===parseInt(bd));
+  if(t!=='all')l=l.filter(p=>p.type===t);
+  renderListings(l);
+}
+function resetF(){['fb','fn','fbd','ft'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='all'});renderListings(props)}
+
+/* DETAIL */
+function renderDetail(id){
+  const p=props.find(x=>x.id===id);if(!p)return;
+  document.getElementById('dc').innerHTML=`
+    <div class="dhero">
+      <div class="dhbg" style="background-image:url('${p.imgs[0]}')"></div>
+      <div class="dho"></div>
+      <div class="dhc">
+        <div class="dhbr" onclick="go('listings')" data-h>Properties <span>/ ${p.nb} / ${p.name}</span></div>
+        <div class="dhn">${p.name}</div>
+        <div class="dhloc">— ${p.nb}, Medellín</div>
+      </div>
+    </div>
+    <div class="dqf">
+      <div class="dqfi"><div class="dqfl">Bedrooms</div><div class="dqfv">${p.beds}</div></div>
+      <div class="dqfi"><div class="dqfl">Bathrooms</div><div class="dqfv">${p.baths}</div></div>
+      <div class="dqfi"><div class="dqfl">Interior</div><div class="dqfv">${p.sqm}m²</div></div>
+      <div class="dqfi"><div class="dqfl">Floor</div><div class="dqfv">${p.floor}</div></div>
+      <div class="dqfi"><div class="dqfl">Type</div><div class="dqfv">${p.type}</div></div>
+    </div>
+    <div class="dbody">
+      <div class="dmain">
+        <div class="dsec"><h3>About this Property</h3><p style="font-size:15px;color:var(--mu);line-height:1.85">${p.desc}</p></div>
+        <div class="dsec"><h3>Why This Property</h3><ul class="wl">${p.why.map(w=>`<li>${w}</li>`).join('')}</ul></div>
+        <div class="dsec"><h3>Gallery</h3>
+          <div class="dgal">${p.imgs.map(i=>`<div class="gimg" style="background-image:url('${i}');background-size:cover;background-position:center"></div>`).join('')}</div>
+        </div>
+        <div class="dsec"><h3>Building Amenities</h3>
+          <div class="amg">${p.amen.map(a=>`<div class="ami"><div class="amd"></div>${a}</div>`).join('')}</div>
+        </div>
+      </div>
+      <div class="dsb">
+        <div class="sbpb"><div class="sbpf">From</div><div class="sbpv">${p.pd} USD</div><div class="sbpa">${p.admin}</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a class="btn-p" onclick="go('apply')" data-h style="justify-content:center">Request Private Viewing <span class="arr">→</span></a>
+          <a class="btn-s" onclick="go('apply')" data-h style="justify-content:center">Request Full Dossier</a>
+          <a class="btn-g" href="https://wa.me/573137907109" data-h style="justify-content:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> WhatsApp John
+          </a>
+        </div>
+        <div class="sbdd"><div class="sbddt">Due Diligence — Verified</div>${p.dd.map(d=>`<div class="ddi"><div class="ddc"></div>${d}</div>`).join('')}</div>
+        <div style="padding:16px;background:var(--sf);border:1px solid var(--bd)">
+          <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:var(--gd);text-transform:uppercase;margin-bottom:8px">Neighbourhood</div>
+          <div style="font-family:var(--fs);font-size:18px;color:var(--ow);margin-bottom:6px">${p.nb}</div>
+          <p style="font-size:12px;color:var(--mu);line-height:1.65;margin:0">One of Medellín's most established premium residential zones, consistently preferred by foreign buyers for quality of life and resale liquidity.</p>
+        </div>
+      </div>
+    </div>`;
+  bindH();setTimeout(rev,60);
+}
+
+/* FORM */
+function updTabs(s){
+  for(let i=1;i<=4;i++){
+    const t=document.getElementById('stab'+i);
+    if(!t)continue;
+    t.className='step-tab'+(i<s?' done':i===s?' curr':'');
+  }
+}
+function nxt(s){
+  if(s>1){
+    if(s===2&&!v1())return;
+    if(s===3&&!v2())return;
+  }
+  for(let i=1;i<=4;i++){
+    const el=document.getElementById('fs'+i);
+    if(el){el.classList.remove('active');el.style.animation='none';el.offsetHeight;el.style.animation=''}
+  }
+  const el=document.getElementById('fs'+s);
+  if(el){el.classList.add('active');}
+  cstep=s;
+  document.getElementById('fpf').style.width=((s-1)/4*100)+'%';
+  updTabs(s);
+  document.querySelector('.apply-right').scrollTop=0;
+}
+function v1(){
+  fd.name=document.getElementById('fn')?.value.trim()||'';
+  fd.email=document.getElementById('fe')?.value.trim()||'';
+  fd.wa=document.getElementById('fw')?.value.trim()||'';
+  if(!fd.name||!fd.email){shk(document.getElementById('fs1'));return false;}
+  return true;
+}
+function v2(){
+  if(!fd.fund||!fd.tl){shk(document.getElementById('fs2'));return false;}
+  return true;
+}
+function shk(el){if(!el)return;el.style.animation='none';el.offsetHeight;el.style.animation='shk .4s ease'}
+const sk=document.createElement('style');sk.textContent='@keyframes shk{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}';document.head.appendChild(sk);
+function selR(gid,el,v){
+  document.querySelectorAll('#'+gid+' .ro').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  if(gid==='rg-fund')fd.fund=v;
+  if(gid==='rg-time')fd.tl=v;
+  if(gid==='rg-col')fd.col=v;
+  if(gid==='rg-pof')fd.pof=v;
+}
+function togC(el,v){
+  el.classList.toggle('sel');
+  const arr=el.closest('#cg-nb')?fd.nb:fd.mh;
+  const i=arr.indexOf(v);
+  if(i>-1)arr.splice(i,1);else arr.push(v);
+}
+function togCon(){
+  con=!con;fd.con=con;
+  const b=document.getElementById('conb');
+  if(b)b.classList.toggle('sel',con);
+}
+function score(){
+  let s=0;
+  const bm={'150-300':0,'300-500':25,'500-800':35,'800-1200':35,'1200plus':35,'pref':5};
+  s+=bm[fd.budget]||0;
+  if(fd.budget==='800-1200'||fd.budget==='1200plus')s+=10;
+  const tm={'30d':20,'1-3m':12,'3-6m':6,'6plus':2,'exp':0};
+  s+=tm[fd.tl]||0;
+  if(fd.col==='yes')s+=15;
+  if(fd.fund==='cash')s+=15;
+  if(fd.fund==='fund')s+=10;
+  if(fd.pof==='uploaded')s+=25;
+  if(fd.pof==='request')s+=10;
+  if(fd.nb.length||fd.mh.length)s+=5;
+  return Math.min(s,100);
+}
+function sub(){
+  if(!con){shk(document.getElementById('fs4'));return;}
+  fd.blk=document.getElementById('fblk')?.value||'';
+  fd.budget=document.getElementById('fbudget')?.value||'';
+  const sc=score();
+  let tier,tc,msg,sub2,steps;
+  if(sc>=80){
+    tier='HOT LEAD';tc='hot';
+    msg=`${fd.name.split(' ')[0]}, you're a priority client. Your shortlist will be ready within 24 hours.`;
+    sub2='Based on your timeline and budget, you qualify for immediate scheduling. Expect a WhatsApp from John within 30 minutes.';
+    steps=['WhatsApp from John within 30 minutes','Curated shortlist delivered within 24 hours','Private viewings available this week','<strong style="color:var(--cp)">→ Book your consultation: <a href="https://wa.me/573137907109" style="color:var(--cp)">WhatsApp +57 313 790 7109</a></strong>'];
+  } else if(sc>=60){
+    tier='WARM LEAD';tc='warm';
+    msg=`Thank you, ${fd.name.split(' ')[0]}. We'll review your criteria and be in touch.`;
+    sub2="John will review your inquiry personally and send a curated shortlist within 48 hours.";
+    steps=['Personal review within a few hours','Curated shortlist sent within 48 hours','Agent follow-up by email and WhatsApp within 24 hours','Foreign Buyer\'s Guide sent to your email now'];
+  } else {
+    tier='RECEIVED';tc='cold';
+    msg='Thank you for your enquiry. We\'ve received your details.';
+    sub2="We'll send you our Foreign Buyer's Guide — when your timeline firms up, re-apply for a curated shortlist.";
+    steps=['Foreign Buyer\'s Guide sent to your email','Monthly market updates (opt out anytime)','Re-apply whenever you\'re ready to move forward'];
+  }
+  for(let i=1;i<=4;i++){const el=document.getElementById('fs'+i);if(el)el.classList.remove('active');}
+  document.getElementById('fpf').style.width='100%';
+  updTabs(5);
+  const r=document.getElementById('fres');
+  r.classList.add('active');
+  r.innerHTML=`
+    <div class="rsd"><div class="rsn">${sc}</div><div class="rsdm">/100</div></div>
+    <div class="rtier ${tc}">${tier}</div>
+    <h2 class="rmsg">${msg}</h2>
+    <p class="rsub">${sub2}</p>
+    <div class="rnx"><div class="rnxt">What Happens Next</div>${steps.map(s=>`<div class="rnxi">${s}</div>`).join('')}</div>
+    ${sc>=80?`<a class="btn-p" href="https://wa.me/573137907109" data-h style="margin-top:8px">WhatsApp John Now <span class="arr">→</span></a>`:''}
+    <a class="btn-g" onclick="go('listings')" data-h style="margin-top:4px">Browse Properties While You Wait</a>`;
+  bindH();
+}
+
+/* INIT */
+document.addEventListener('DOMContentLoaded',()=>{
+  renderHome();
+  // inject home footer
+  const hf=document.getElementById('hf');
+  if(hf&&!hf.dataset.f){hf.dataset.f='1';hf.innerHTML=document.getElementById('ft').innerHTML;}
+  rev();bindH();
+});
+</script>
+</body>
+</html>

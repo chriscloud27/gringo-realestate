@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Luxury emblem (ornament only, black and gold)">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E3C77A"/>
+      <stop offset="0.5" stop-color="#C8A24A"/>
+      <stop offset="1" stop-color="#E3C77A"/>
+    </linearGradient>
+    <style>
+      .stroke { stroke: url(#gold); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .strokeThin { stroke: url(#gold); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: .95; }
+    </style>
+  </defs>
+
+  <!-- Top ornament -->
+  <path class="strokeThin" d="M210 95
+    C260 52, 340 52, 390 95
+    C415 115, 450 120, 490 112
+    C535 103, 570 80, 600 52
+    C630 80, 665 103, 710 112
+    C750 120, 785 115, 810 95
+    C860 52, 940 52, 990 95" />
+
+  <!-- Top center flourish -->
+  <path class="stroke" d="M600 48
+    C585 58, 575 72, 575 90
+    C575 120, 605 122, 600 144
+    C595 122, 625 120, 625 90
+    C625 72, 615 58, 600 48" />
+
+  <!-- Small leaves -->
+  <path class="strokeThin" d="M520 102 C505 92, 490 90, 475 96 C490 104, 505 110, 520 102 Z" />
+  <path class="strokeThin" d="M680 102 C695 92, 710 90, 725 96 C710 104, 695 110, 680 102 Z" />
+
+  <!-- Frame lines (leave space in middle for separate text usage) -->
+  <path class="strokeThin" d="M170 160 H1030" />
+  <path class="strokeThin" d="M170 260 H1030" />
+
+  <!-- Bottom ornament -->
+  <path class="strokeThin" d="M210 330
+    C260 372, 340 372, 390 330
+    C415 310, 450 305, 490 313
+    C535 322, 570 345, 600 373
+    C630 345, 665 322, 710 313
+    C750 305, 785 310, 810 330
+    C860 372, 940 372, 990 330" />
+
+  <!-- Bottom center flourish -->
+  <path class="stroke" d="M600 377
+    C585 367, 575 353, 575 335
+    C575 305, 605 303, 600 281
+    C595 303, 625 305, 625 335
+    C625 353, 615 367, 600 377" />
+
+  <!-- Corner curls (left) -->
+  <path class="stroke" d="M170 160
+    C120 165, 120 205, 170 210
+    C205 214, 205 246, 170 250
+    C130 256, 130 255, 170 260" />
+  <path class="strokeThin" d="M190 170
+    C155 176, 155 198, 190 204" />
+  <path class="strokeThin" d="M190 226
+    C155 232, 155 254, 190 260" />
+
+  <!-- Corner curls (right) -->
+  <path class="stroke" d="M1030 160
+    C1080 165, 1080 205, 1030 210
+    C995 214, 995 246, 1030 250
+    C1070 256, 1070 255, 1030 260" />
+  <path class="strokeThin" d="M1010 170
+    C1045 176, 1045 198, 1010 204" />
+  <path class="strokeThin" d="M1010 226
+    C1045 232, 1045 254, 1010 260" />
+
+  <!-- Micro frame corners -->
+  <path class="strokeThin" d="M190 150 H240" />
+  <path class="strokeThin" d="M1010 150 H960" />
+  <path class="strokeThin" d="M190 270 H240" />
+  <path class="strokeThin" d="M1010 270 H960" />
+</svg>
