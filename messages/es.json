@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "listings": "Propiedades",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Encuentra tu hogar ideal en el extranjero",
+    "subtitle": "Servicios inmobiliarios expertos para expatriados y compradores extranjeros en América Latina",
+    "cta": "Ver propiedades",
+    "ctaSecondary": "Saber más"
+  },
+  "features": {
+    "title": "¿Por qué elegir Gringo Real Estate?",
+    "bilingual": {
+      "title": "Soporte bilingüe",
+      "description": "Nuestro equipo habla tu idioma. Ofrecemos soporte completo en inglés, alemán, español y francés."
+    },
+    "legal": {
+      "title": "Experiencia legal",
+      "description": "Navega las leyes de propiedad extranjera con confianza. Manejamos todos los aspectos legales de tu compra."
+    },
+    "local": {
+      "title": "Conocimiento local",
+      "description": "El profundo conocimiento del mercado local significa que encontramos las mejores ofertas antes de que lleguen al mercado."
+    }
+  },
+  "blog": {
+    "title": "Lo último de nuestro blog",
+    "readMore": "Leer más",
+    "backToBlog": "Volver al blog",
+    "publishedOn": "Publicado el",
+    "noPosts": "No hay artículos disponibles aún."
+  },
+  "contact": {
+    "title": "Ponte en contacto",
+    "subtitle": "¿Listo para encontrar tu propiedad perfecta? Hablemos.",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "success": "¡Gracias! Nos pondremos en contacto contigo pronto.",
+    "namePlaceholder": "Juan García",
+    "emailPlaceholder": "juan@ejemplo.com",
+    "phonePlaceholder": "+34 123 456 789",
+    "messagePlaceholder": "Cuéntanos sobre tu búsqueda de propiedad..."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  }
+}
