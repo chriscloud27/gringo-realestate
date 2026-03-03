@@ -20,14 +20,38 @@ function RichText({ richText }: { richText: RichTextItem[] }) {
   return (
     <>
       {richText.map((text, i) => {
-        let content: React.ReactNode = text.plain_text;
-        if (text.annotations.bold) content = <strong key={i}>{content}</strong>;
-        if (text.annotations.italic) content = <em key={i}>{content}</em>;
-        if (text.annotations.code) content = <code key={i} className="bg-gray-100 px-1 rounded text-sm font-mono">{content}</code>;
-        if (text.annotations.strikethrough) content = <del key={i}>{content}</del>;
-        if (text.annotations.underline) content = <u key={i}>{content}</u>;
-        if (text.href) content = <a key={i} href={text.href} className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">{content}</a>;
-        return <span key={i}>{content}</span>;
+        const { bold, italic, code, strikethrough, underline } = text.annotations;
+        return (
+          <span key={i}>
+            {text.href ? (
+              <a href={text.href} className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">
+                {code ? (
+                  <code className="bg-gray-100 px-1 rounded text-sm font-mono">
+                    {bold ? <strong>{italic ? <em>{text.plain_text}</em> : text.plain_text}</strong> : italic ? <em>{text.plain_text}</em> : text.plain_text}
+                  </code>
+                ) : bold ? (
+                  <strong>{italic ? <em>{strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</em> : strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</strong>
+                ) : italic ? (
+                  <em>{strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</em>
+                ) : strikethrough ? (
+                  <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del>
+                ) : underline ? (
+                  <u>{text.plain_text}</u>
+                ) : text.plain_text}
+              </a>
+            ) : code ? (
+              <code className="bg-gray-100 px-1 rounded text-sm font-mono">{text.plain_text}</code>
+            ) : bold ? (
+              <strong>{italic ? <em>{text.plain_text}</em> : text.plain_text}</strong>
+            ) : italic ? (
+              <em>{text.plain_text}</em>
+            ) : strikethrough ? (
+              <del>{text.plain_text}</del>
+            ) : underline ? (
+              <u>{text.plain_text}</u>
+            ) : text.plain_text}
+          </span>
+        );
       })}
     </>
   );
