@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properties — Luxury Apartments Medellín</title>
+<meta name="description" content="Browse all curated properties in Medellín. Filter by budget, area, beds, and type.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<div id="cur"></div><div id="cur-r"></div>
+
+<nav id="nav">
+  <a class="nav-logo" href="../" data-h><svg height="44" viewBox="0 0 320 80" style="width:auto"><text x="160" y="44" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="14" font-weight="400" letter-spacing="5" fill="#F3F0EA">LUXURY APARTMENTS</text></svg></a>
+  <div class="nav-links">
+    <a class="nav-link" href="../" data-h>Home</a>
+    <a class="nav-link nav__link--active" href="./" data-h>Properties</a>
+    <a class="nav-link" href="../about/index.html" data-h>About</a>
+    <a class="nav-link" href="../resources/index.html" data-h>Resources</a>
+  </div>
+  <div class="ham" id="menu-toggle" data-h><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mm">
+  <span class="mob-close" id="menu-toggle-close" data-h>✕</span>
+  <a class="nav-link" href="../" data-h>Home</a>
+  <a class="nav-link nav__link--active" href="./" data-h>Properties</a>
+  <a class="nav-link" href="../about/index.html" data-h>About</a>
+  <a class="nav-link" href="../resources/index.html" data-h>Resources</a>
+</div>
+
+<main id="properties-page">
+  <section class="lhero">
+    <div class="wrap">
+      <span class="lbl">Portfolio</span>
+      <h1 class="h-lg" style="margin-bottom:16px">Curated <em>Properties</em></h1>
+      <p class="bt" style="max-width:520px">Every property has been visited, verified, and personally approved by John Irish. Luxury inventory from $250,000 USD.</p>
+    </div>
+  </section>
+
+  <div class="fbar">
+    <div class="finner">
+      <div class="fi"><span class="fl">Budget</span><select class="fsel" id="fb" data-h><option value="all">All</option><option value="lo">$250K – $500K</option><option value="mi">$500K – $800K</option><option value="hi">$800K+</option></select></div>
+      <div class="fi"><span class="fl">Area</span><select class="fsel" id="fn" data-h><option value="all">All</option><option value="El Poblado">El Poblado</option><option value="Envigado">Envigado</option><option value="Laureles">Laureles</option><option value="El Retiro">El Retiro</option></select></div>
+      <div class="fi"><span class="fl">Beds</span><select class="fsel" id="fbd" data-h><option value="all">All</option><option value="2">2 Beds</option><option value="3">3 Beds</option><option value="4">4 Beds</option><option value="5">5+</option></select></div>
+      <div class="fi"><span class="fl">Type</span><select class="fsel" id="ft" data-h><option value="all">All</option><option value="Penthouse">Penthouse</option><option value="Apartment">Apartment</option><option value="Villa">Villa</option></select></div>
+      <div class="fi"><a class="btn-p" href="../resources/index.html" data-h style="white-space:nowrap">Buyer Resources</a></div>
+    </div>
+  </div>
+
+  <section class="listing-area"><div class="wrap"><div class="lgrid" id="lgrid"></div></div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg2">
+      <div><p class="bt">John Irish · CEO Realtor. Trophy-grade properties in Medellín, privately curated for foreign buyers.</p></div>
+      <div><div class="fct">Pages</div><ul class="fl2"><li><a href="../">Home</a></li><li><a href="./">Properties</a></li><li><a href="../about/index.html">About</a></li><li><a href="../resources/index.html">Resources</a></li></ul></div>
+      <div><div class="fct">Neighbourhoods</div><ul class="fl2"><li><a>El Poblado</a></li><li><a>Envigado</a></li><li><a>Laureles</a></li><li><a>El Retiro</a></li></ul></div>
+      <div><div class="fct">Contact</div><ul class="fl2"><li><a href="tel:+573137907109">+57 313 790 7109</a></li><li><a href="mailto:johnirish35@gmail.com">johnirish35@gmail.com</a></li></ul></div>
+    </div>
+    <div class="fb"><span class="fbt">© 2026 Luxury Apartments Medellín</span><span class="fbt">Private Inquiry Only</span></div>
+  </div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/properties.js"></script>
+<script>window.PROPERTIES_DATA_URL = "../assets/data/properties.json";</script>
+<script src="../assets/js/filter.js"></script>
+<script>document.addEventListener('DOMContentLoaded', initPropertiesPage);document.getElementById('menu-toggle-close')?.addEventListener('click',()=>document.getElementById('mm')?.classList.remove('open'));</script>
+</body>
+</html>

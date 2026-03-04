@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Luxury Apartments Medellín</title>
+<meta name="description" content="About John Irish and the standards behind Luxury Apartments Medellín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<div id="cur"></div><div id="cur-r"></div>
+<nav id="nav">
+  <a class="nav-logo" href="../" data-h><span class="nav-link" style="color:var(--ow)">LUXURY APARTMENTS</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="../" data-h>Home</a>
+    <a class="nav-link" href="../properties/index.html" data-h>Properties</a>
+    <a class="nav-link nav__link--active" href="./" data-h>About</a>
+    <a class="nav-link" href="../resources/index.html" data-h>Resources</a>
+  </div>
+  <div class="ham" id="menu-toggle" data-h><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mm">
+  <span class="mob-close" id="menu-toggle-close" data-h>✕</span>
+  <a class="nav-link" href="../" data-h>Home</a>
+  <a class="nav-link" href="../properties/index.html" data-h>Properties</a>
+  <a class="nav-link nav__link--active" href="./" data-h>About</a>
+  <a class="nav-link" href="../resources/index.html" data-h>Resources</a>
+</div>
+
+<main id="about-content" style="padding-top:72px">
+  <div class="wrap">
+    <div class="al reveal">
+      <div class="aic"><div class="aib"></div><div class="aio"></div></div>
+      <div class="atx">
+        <span class="lbl">About John Irish</span>
+        <h1 class="h-md" style="margin-bottom:24px">I only list what<br><em>I would buy myself.</em></h1>
+        <p class="abt-bio">Irish-born CEO Realtor with 30+ years experience. Based in Medellín for 5+ years, John handles everything foreign buyers need: luxury apartments, property sales, lease-to-own financing, escrow title services, and power of attorney.</p>
+        <ul class="aprn">
+          <li>Bilingual advisory from shortlist to closing</li>
+          <li>Due diligence on every property before presentation</li>
+          <li>Long-term support after acquisition</li>
+        </ul>
+        <a class="btn-s" href="../properties/index.html" data-h>Browse Properties <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><div class="fb"><span class="fbt">© 2026 Luxury Apartments Medellín</span><span class="fbt">Medellín, Antioquia</span></div></div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script>document.getElementById('menu-toggle-close')?.addEventListener('click',()=>document.getElementById('mm')?.classList.remove('open'));</script>
+</body>
+</html>
