@@ -21,37 +21,23 @@ function RichText({ richText }: { richText: RichTextItem[] }) {
     <>
       {richText.map((text, i) => {
         const { bold, italic, code, strikethrough, underline } = text.annotations;
-        return (
-          <span key={i}>
-            {text.href ? (
-              <a href={text.href} className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">
-                {code ? (
-                  <code className="bg-gray-100 px-1 rounded text-sm font-mono">
-                    {bold ? <strong>{italic ? <em>{text.plain_text}</em> : text.plain_text}</strong> : italic ? <em>{text.plain_text}</em> : text.plain_text}
-                  </code>
-                ) : bold ? (
-                  <strong>{italic ? <em>{strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</em> : strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</strong>
-                ) : italic ? (
-                  <em>{strikethrough ? <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del> : underline ? <u>{text.plain_text}</u> : text.plain_text}</em>
-                ) : strikethrough ? (
-                  <del>{underline ? <u>{text.plain_text}</u> : text.plain_text}</del>
-                ) : underline ? (
-                  <u>{text.plain_text}</u>
-                ) : text.plain_text}
-              </a>
-            ) : code ? (
-              <code className="bg-gray-100 px-1 rounded text-sm font-mono">{text.plain_text}</code>
-            ) : bold ? (
-              <strong>{italic ? <em>{text.plain_text}</em> : text.plain_text}</strong>
-            ) : italic ? (
-              <em>{text.plain_text}</em>
-            ) : strikethrough ? (
-              <del>{text.plain_text}</del>
-            ) : underline ? (
-              <u>{text.plain_text}</u>
-            ) : text.plain_text}
-          </span>
-        );
+
+        // Apply inline annotations sequentially, innermost first
+        let content: React.ReactNode = text.plain_text;
+        if (underline) content = <u>{content}</u>;
+        if (strikethrough) content = <del>{content}</del>;
+        if (italic) content = <em>{content}</em>;
+        if (bold) content = <strong>{content}</strong>;
+        if (code) content = <code className="bg-gray-100 px-1 rounded text-sm font-mono">{content}</code>;
+        if (text.href) {
+          content = (
+            <a href={text.href} className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">
+              {content}
+            </a>
+          );
+        }
+
+        return <span key={i}>{content}</span>;
       })}
     </>
   );

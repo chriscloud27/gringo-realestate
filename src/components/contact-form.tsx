@@ -22,6 +22,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export function ContactForm() {
   const t = useTranslations("contact");
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -33,13 +34,19 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong. Please try again.");
+    }
   };
 
   if (submitted) {
@@ -107,6 +114,9 @@ export function ContactForm() {
       <Button type="submit" disabled={isSubmitting} className="w-full">
         {isSubmitting ? "Sending..." : t("submit")}
       </Button>
+      {submitError && (
+        <p className="text-red-500 text-sm text-center">{submitError}</p>
+      )}
     </form>
   );
 }
