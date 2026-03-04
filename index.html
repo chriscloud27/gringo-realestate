@@ -169,7 +169,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 #abt{padding:128px 0;background:var(--ob)}
 .al{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--bd)}
 .aic{position:relative;overflow:hidden;min-height:580px}
-.aib{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85');background-size:cover;background-position:center top}
+.aib{position:absolute;inset:0;background-image:url('./content/john-profile.jpg');background-size:cover;background-position:center top}
 .aio{position:absolute;inset:0;background:linear-gradient(to right,transparent 40%,var(--ob) 100%),linear-gradient(to top,rgba(11,11,15,.7) 0%,transparent 50%)}
 .atx{padding:64px 56px;border-left:1px solid var(--bd);display:flex;flex-direction:column;justify-content:center}
 .aqm{font-family:var(--fs);font-size:80px;font-weight:300;color:rgba(200,162,74,.15);line-height:.8;margin-bottom:20px}
@@ -277,7 +277,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 #pg-about{padding-top:72px}
 .abhero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh}
 .abhi{position:relative;overflow:hidden}
-.abhib{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85');background-size:cover;background-position:center top}
+.abhib{position:absolute;inset:0;background-image:url('./content/john-profile.jpg');background-size:cover;background-position:center top}
 .abhio{position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,var(--ob) 100%)}
 .abtx{padding:120px 72px 72px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--bd);background:var(--ob)}
 
@@ -400,6 +400,11 @@ footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
 .fb-lgo{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .fb-lgo svg{height:40px;width:auto}
 .fb-desc{font-size:13px;color:var(--mu);line-height:1.75;max-width:280px;margin-bottom:24px}
+.mpr-brand{gap:16px}
+.mpr-mark{width:56px;height:56px;border:1px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:30px;color:var(--gd);line-height:1;letter-spacing:.03em}
+.mpr-wording{display:flex;flex-direction:column;gap:4px}
+.mpr-title{font-family:var(--fs);font-size:22px;letter-spacing:.12em;color:var(--ow);line-height:1}
+.mpr-sub{font-family:var(--fm);font-size:9px;letter-spacing:.32em;color:var(--mu);text-transform:uppercase;line-height:1}
 .fct{font-family:var(--fm);font-size:9px;letter-spacing:.25em;color:var(--gd);text-transform:uppercase;margin-bottom:20px}
 .fl2{list-style:none;display:flex;flex-direction:column;gap:10px}
 .fl2 a{font-size:13px;color:var(--mu);transition:color .2s;cursor:none}
@@ -827,8 +832,8 @@ footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
       <div class="absg">
         <div class="abs-text reveal">
           <span class="lbl">The Story</span>
-          <p>I came to Medellín the way most of my clients do — drawn by the climate, the energy, and a quality of life that simply doesn't exist at the same price point anywhere else in the world. I came for a short stay. I stayed for five years and counting.</p>
-          <p>In those first years I learned the market from the inside — as a buyer, as a tenant, and eventually as someone who started helping other English-speaking foreigners navigate the same process I'd stumbled through myself. What I found was a consistent gap: plenty of local agents, almost none with the combination of English fluency, genuine market knowledge, and a network strong enough to get things done properly.</p>
+          <p>I came to Medellín the way most of my clients do. Drawn by the climate, the energy, and a quality of life that simply doesn't exist at the same price point anywhere else in the world. I came for a short stay. I stayed for five years and counting.</p>
+          <p>In those first years I learned the market from the inside. As a buyer, as a tenant, and eventually as someone who started helping other English-speaking foreigners navigate the same process I'd stumbled through myself. What I found was a consistent gap: plenty of local agents, almost none with the combination of English fluency, genuine market knowledge, and a network strong enough to get things done properly.</p>
           <p>I built Luxury Apartments Medellín to fill that gap. Today our practice covers everything a foreign buyer needs under one roof: luxury apartments, commercial leases, property sales, lease-to-own financing, escrow title services, and power of attorney for clients who need a trusted local representative.</p>
           <p>The English-speaking professional network I've built in this city is one of our strongest assets — it means faster due diligence, better legal briefings, and off-market access that most buyers never see.</p>
           <p style="margin-bottom:0"><em style="font-family:var(--fs);color:var(--cp);font-size:17px">— John Irish, CEO Realtor</em></p>
@@ -1112,64 +1117,18 @@ footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
   <div id="apf"></div>
 </div>
 
-<!-- FOOTER TEMPLATE -->
-<template id="ft">
-<footer>
-  <div class="wrap">
-    <div class="fg2">
-      <div>
-        <div class="fb-lgo">
-          <svg height="40" viewBox="0 0 320 80" style="width:auto"><use href="#logo-full"/></svg>
-        </div>
-        <p class="fb-desc">John Irish · CEO Realtor. Trophy-grade properties in Medellín, privately curated for foreign buyers. Bilingual advisory, full due diligence, lease-to-own financing.</p>
-        <a class="btn-s" onclick="go('apply')" data-h style="font-size:9px">Request a Shortlist <span class="arr">→</span></a>
-      </div>
-      <div>
-        <div class="fct">Pages</div>
-        <ul class="fl2">
-          <li><a onclick="go('home')" data-h>Home</a></li>
-          <li><a onclick="go('listings')" data-h>Properties</a></li>
-          <li><a onclick="go('about')" data-h>About John</a></li>
-          <li><a onclick="go('apply')" data-h>Apply</a></li>
-          <li><a onclick="go('apply')" data-h>Foreign Buyer Guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fct">Neighbourhoods</div>
-        <ul class="fl2">
-          <li><a data-h>El Poblado</a></li>
-          <li><a data-h>Envigado</a></li>
-          <li><a data-h>Laureles</a></li>
-          <li><a data-h>El Retiro</a></li>
-          <li><a data-h>La Ceja</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fct">Contact</div>
-        <div class="fci"><span class="fcil">WhatsApp</span><span class="fciv">+57 313 790 7109</span></div>
-        <div class="fci"><span class="fcil">Email</span><span class="fciv">johnirish35@gmail.com</span></div>
-        <div class="fci"><span class="fcil">Market</span><span class="fciv">Medellín, Antioquia</span></div>
-        <div class="fci"><span class="fcil">Languages</span><span class="fciv">English · Español</span></div>
-      </div>
-    </div>
-    <div class="fb">
-      <span class="fbt">© 2025 Luxury Apartments Medellín · John Irish · CEO Realtor</span>
-      <span class="fbt">From $250,000 USD · Private Inquiry Only</span>
-    </div>
-  </div>
-</footer>
-</template>
-
 <!-- ══════════════════════════ JS ══════════════════════════ -->
 <script>
 /* DATA */
 const props=[
-  {id:'pa',name:'Penthouse Alto',nb:'El Poblado',type:'Penthouse',beds:4,baths:4,sqm:350,floor:'28th',usd:890000,pd:'$890,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Penthouse',img:'https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80'],why:['360° panoramic views from three terraces totalling 180m²','Architect-designed kitchen — Gaggenau appliances, stone surfaces','Building verified: HOA fully funded, zero litigation, Certificado de Ocupación confirmed','Private elevator access, 3 parking spaces, dedicated storage floor','Developer: Conconcreto — 40+ premium buildings in Medellín','STR permitted by co-propiedad — strong Airbnb income validated'],amen:['Rooftop Pool','Concierge 24h','Gym','Business Centre','Pet Friendly','Visitor Parking','Private Generator','EV Charging'],dd:['Title clear — 3 generations','HOA fund: COP 450M reserve','Certificate of Occupancy confirmed','Zero active litigation','Building permits: complete','Strata 6 — El Poblado'],desc:'An exceptional opportunity in one of El Poblado\'s most prestigious buildings. The penthouse occupies the entire 28th floor with views extending from Cerro Nutibara to the Eastern Cordillera.',admin:'Admin: COP 2.8M / month'},
-  {id:'rc',name:'Residencia Cielo',nb:'Envigado',type:'Apartment',beds:3,baths:3,sqm:220,floor:'14th',usd:420000,pd:'$420,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80'],why:['Enviable position — Envigado\'s best-regarded residential building with consistent resale premium','Generous 220m² layout — no wasted corridors or dark rooms','Kitchen fully renovated 2023 — Italian cabinetry, Miele appliances, marble island','Master suite with mountain view, walk-in wardrobe, spa-standard bathroom','Quieter neighbourhood — walkable to best restaurants and cafés','Clean title, well-maintained building, proactive HOA board'],amen:['Pool','Gym','Security 24h','Children\'s Play Area','BBQ Zone','Parking x2','Storage Unit','Social Room'],dd:['Title clear — 2 previous owners','HOA fund: COP 180M reserve','Certificate of Occupancy confirmed','Zero active litigation','Strata 5 — Envigado','Building completed 2017'],desc:'A rare combination of generous space, prime Envigado location, and building quality that genuinely holds value. Popular with foreign buyers who prefer Envigado\'s character over El Poblado.',admin:'Admin: COP 1.4M / month'},
-  {id:'af',name:'Apartamento Flora',nb:'El Poblado',type:'Apartment',beds:3,baths:3,sqm:280,floor:'19th',usd:680000,pd:'$680,000',tags:['Verified','Off-Market'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80'],why:['Off-market — not publicly listed, available exclusively through private inquiry','Exceptional value vs comparable units currently listed in the same building','Triple-aspect layout — morning sun in kitchen and master, afternoon sun in living room','Fully furnished to high standard — available with or without furniture package','Proven rental history: COP 12M/month average (Airbnb + long-term)','Motivated seller — clean transaction, full documentation ready'],amen:['Infinity Pool','Concierge','Gym','Spa','Restaurant','Parking x2','Wine Cellar','Sky Lounge'],dd:['Title clear — single previous owner','HOA fund: COP 320M reserve','Certificate of Occupancy confirmed','Zero active litigation','All admin fees current','Strata 6 — El Poblado premium'],desc:'An off-market opportunity in one of El Poblado\'s most coveted buildings. Available exclusively to clients who apply through our inquiry process. Full dossier provided on qualification.',admin:'Admin: COP 2.1M / month'},
-  {id:'vj',name:'Villa Jardín',nb:'El Retiro',type:'Villa',beds:5,baths:5,sqm:600,floor:'G + 2',usd:1200000,pd:'$1,200,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Villa',img:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=700&q=80'],why:['Standalone villa on 2,400m² private gardens with uninterrupted valley views','Pool, outdoor kitchen, and separate guest/staff quarters on-site','El Retiro offers altitude, climate, and privacy unavailable in Medellín city proper','Private gated access, full perimeter security, dedicated maintenance staff','Lease-to-own structure available through John Irish\'s in-house financing','Clean title, no encumbrances — family sale with full documentation ready'],amen:['Private Pool','Outdoor Kitchen','Guest House','Garage x4','Private Gardens','Mountain Views','Staff Quarters','Gated Access'],dd:['Title clear — family owned 25 years','No HOA — private property','Building permits: complete','Zero active litigation','Environmental permit confirmed','Rural cadastral record verified'],desc:'A landmark villa in the hills above El Retiro, offering genuine privacy, a private pool, and grounds that create a sense of estate. An hour from the city, a world apart.',admin:'Private property — no HOA fee'},
-  {id:'tn',name:'Torre Nordika',nb:'Laureles',type:'Apartment',beds:2,baths:2,sqm:180,floor:'10th',usd:350000,pd:'$350,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=700&q=80'],why:['Best value entry to Laureles — consistently strong demand from long-stay expats','Laureles offers the authentic Medellín neighbourhood experience absent in El Poblado','New building (2021) — minimal maintenance costs expected for 10+ years','Efficient 180m² — optimal two-bedroom configuration, no space wasted','High owner-occupancy ratio: signals quality and community stability','Excellent resale liquidity — Laureles maintains consistent buyer demand'],amen:['Pool','Gym','Security 24h','Coworking Space','Rooftop Terrace','Parking x1','Pet Friendly','Bike Storage'],dd:['Title clear — developer to first buyer','HOA fund: well-capitalised','Certificate of Occupancy 2021','Zero litigation history','Strata 5 — Laureles','All fees current'],desc:'A well-specified apartment in Laureles\'s most compelling new building. For buyers prioritising authentic neighbourhood living, rental yield, and entry value.',admin:'Admin: COP 1.1M / month'},
-  {id:'pd',name:'Penthouse Dorado',nb:'El Poblado',type:'Penthouse',beds:4,baths:5,sqm:420,floor:'32nd + 33rd',usd:1450000,pd:'$1,450,000',tags:['Off-Market','Foreign-Buyer Safe'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1560185007-5f0bb1866cab?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=700&q=80'],why:['Duplex penthouse — 420m² across two levels with private rooftop and plunge pool','No equivalent on the market: only duplex penthouse currently off-market in El Poblado','Designed by architect Juan Mesa — custom finishes, no developer-standard materials','Private rooftop with 360° views, built-in BBQ, 140m² outdoor living area','UHNW standard: wine cellar, home cinema, staff quarters, smart-home throughout','Discreet sale — full dossier only after qualification. Motivated seller, clean transaction.'],amen:['Private Rooftop Pool','Home Cinema','Wine Cellar','Staff Quarters','Private Gym','Concierge 24h','Helipad Access','4 Parking Spaces'],dd:['Title clear — architect-owner','HOA fully funded','Certificate of Occupancy confirmed','Zero active litigation','All permits including rooftop','Strata 6 — El Poblado prime'],desc:'The most exceptional residential property currently available in Medellín. A bespoke duplex penthouse designed and owned by its architect, available exclusively through private inquiry.',admin:'Admin: COP 3.6M / month'}
+  {id:'pa',name:'MONTE CARLO BUILDING',nb:'El Poblado',type:'Apartment',beds:3,baths:3,sqm:160,floor:'Historical Building',usd:650000,pd:'$650,000',tags:['Verified','Historical Building', 'Foreign-buyer safe'],badge:'Historical Building',img:'./content/property 1/WhatsApp Image 2026-03-03 at 14.28.24.jpeg',imgs:['./content/property 1/WhatsApp Image 2026-03-03 at 14.28.24.jpeg','./content/property 1/WhatsApp Image 2026-03-03 at 14.28.38.jpeg','./content/property 1/WhatsApp Image 2026-03-03 at 14.28.47.jpeg','./content/property 1/WhatsApp Image 2026-03-03 at 14.29.01.jpeg'],why:['160 sq metres interior layout','3 bedroom, 3 bath configuration','Includes maids quarters','Located in THE MONTE CARLO BUILDING','Next to San Fernando Plaza in the heart of the financial district of El Poblado, Medellín','Prime central location for premium city living'],amen:['Maids Quarters','Historical Building','Prime Financial District Location','Walkable to San Fernando Plaza','Secure Building Access','Central El Poblado Address'],dd:['Building: THE MONTE CARLO BUILDING','Category: Historical building','Layout: 160 sq metres · 3 bedroom · 3 bath','Includes maids quarters','Location verified next to San Fernando Plaza','El Poblado financial district, Medellín'],desc:'THE MONTE CARLO BUILDING is a 160 sq metres, 3 bedroom, 3 bath residence with maids quarters, located next to San Fernando Plaza in the heart of the financial district of El Poblado, Medellín.',admin:'Historical building administration — details on request'},
+  {id:'ep1',name:'Residencia Poblado 1',nb:'El Poblado',type:'Apartment',beds:null,baths:null,sqm:null,floor:null,usd:null,pd:'$—',tags:['Verified','City View', 'Foreign-buyer safe'],badge:'Available',img:'./content/property 2/1.jpeg',imgs:['./content/property 2/1.jpeg','./content/property 2/2.jpeg','./content/property 2/3.jpeg','./content/property 2/4.jpeg'],why:['Central El Poblado location — around Cra. 38 # 9A-36 (restaurants, offices, services nearby)','High-floor feel with open skyline/city-facing views from large windows','Bright, polished hardwood floors with geometric inlay detailing','Multiple large rooms (likely bedrooms/living) with wide windows and wooden trim','Built-in floating wood shelves for display/storage','Bathrooms finished in full-height tile with glass shower enclosure'],amen:['Split A/C unit(s)','Large windows with city view','Hardwood flooring throughout','Built-in floating shelves','Tiled bathrooms','Glass shower enclosure','Internal stair/landing (duplex or split-level feel)'],dd:['Views: city-facing with nearby landmark/commercial buildings visible','Bedrooms: louvered wooden closet doors for built-in storage','Layout: internal stair/landing suggests duplex or split-level circulation','Condition: clean, move-in ready with minor cosmetic wear','Beds/baths/sqm/floor/admin details upon request'],desc:'Bright El Poblado apartment near Cra. 38 # 9A-36 with glossy hardwood floors (decorative inlay), big windows with skyline views, built-in wooden shelving, and tiled bathrooms with glass shower. Internal stair/landing gives it a distinctive duplex or split-level feel.',admin:'Contact for details'},
+  {id:'ep2',name:'Residencia Poblado 2',nb:'El Poblado',type:'Apartment',beds:null,baths:null,sqm:null,floor:null,usd:null,pd:'$—',tags:['Verified','Courtyard View', 'Foreign-buyer safe'],badge:'Available',img:'./content/property 3/1.jpeg',imgs:['./content/property 3/1.jpeg','./content/property 3/2.jpeg','./content/property 3/3.jpeg','./content/property 3/4.jpeg'],why:['Character-filled El Poblado apartment with authentic hardwood finishes','Glossy polished hardwood throughout living areas suggests quality craftsmanship','Duplex-style circulation with spiral staircase creates unique flow','Courtyard-facing views provide rare calm despite central Cra. 38 location','Standout copper-and-stone bathroom fixtures elevate finish quality','Large windows and bright interiors create inviting living environment','Near heart of El Poblado nightlife and dining while maintaining privacy'],amen:['Landscaped courtyard view','Built-in wall shelves','Split A/C units','Stone/Granite counters','Copper vessel sinks','Jacuzzi-style soaking tub','Glass tub/shower panels'],dd:['Bathrooms: large-format tile, floor drain, copper fixtures and sinks','Living areas: polished hardwood, white walls, large windows','Layout: spiral staircase suggests duplex or 2-level circulation','Condition: generally good with minor cosmetic wear in wood and fixtures','Location: Cra. 38 # 9A-36, Oficina Poblado, El Poblado'],desc:'Warm, character-filled El Poblado apartment near Cra. 38 # 9A-36 with glossy hardwood floors, big windows, built-in shelving, and standout copper-and-stone bathroom finishes. Interior-facing courtyard views suggest a calmer feel despite the central location.',admin:'Contact for details'},
+  // {id:'rc',name:'Residencia Cielo',nb:'Envigado',type:'Apartment',beds:3,baths:3,sqm:220,floor:'14th',usd:420000,pd:'$420,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80'],why:['Enviable position — Envigado\'s best-regarded residential building with consistent resale premium','Generous 220m² layout — no wasted corridors or dark rooms','Kitchen fully renovated 2023 — Italian cabinetry, Miele appliances, marble island','Master suite with mountain view, walk-in wardrobe, spa-standard bathroom','Quieter neighbourhood — walkable to best restaurants and cafés','Clean title, well-maintained building, proactive HOA board'],amen:['Pool','Gym','Security 24h','Children\'s Play Area','BBQ Zone','Parking x2','Storage Unit','Social Room'],dd:['Title clear — 2 previous owners','HOA fund: COP 180M reserve','Certificate of Occupancy confirmed','Zero active litigation','Strata 5 — Envigado','Building completed 2017'],desc:'A rare combination of generous space, prime Envigado location, and building quality that genuinely holds value. Popular with foreign buyers who prefer Envigado\'s character over El Poblado.',admin:'Admin: COP 1.4M / month'},
+  // {id:'af',name:'Apartamento Flora',nb:'El Poblado',type:'Apartment',beds:3,baths:3,sqm:280,floor:'19th',usd:680000,pd:'$680,000',tags:['Verified','Off-Market'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80'],why:['Off-market — not publicly listed, available exclusively through private inquiry','Exceptional value vs comparable units currently listed in the same building','Triple-aspect layout — morning sun in kitchen and master, afternoon sun in living room','Fully furnished to high standard — available with or without furniture package','Proven rental history: COP 12M/month average (Airbnb + long-term)','Motivated seller — clean transaction, full documentation ready'],amen:['Infinity Pool','Concierge','Gym','Spa','Restaurant','Parking x2','Wine Cellar','Sky Lounge'],dd:['Title clear — single previous owner','HOA fund: COP 320M reserve','Certificate of Occupancy confirmed','Zero active litigation','All admin fees current','Strata 6 — El Poblado premium'],desc:'An off-market opportunity in one of El Poblado\'s most coveted buildings. Available exclusively to clients who apply through our inquiry process. Full dossier provided on qualification.',admin:'Admin: COP 2.1M / month'},
+  // {id:'vj',name:'Villa Jardín',nb:'El Retiro',type:'Villa',beds:5,baths:5,sqm:600,floor:'G + 2',usd:1200000,pd:'$1,200,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Villa',img:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=700&q=80'],why:['Standalone villa on 2,400m² private gardens with uninterrupted valley views','Pool, outdoor kitchen, and separate guest/staff quarters on-site','El Retiro offers altitude, climate, and privacy unavailable in Medellín city proper','Private gated access, full perimeter security, dedicated maintenance staff','Lease-to-own structure available through John Irish\'s in-house financing','Clean title, no encumbrances — family sale with full documentation ready'],amen:['Private Pool','Outdoor Kitchen','Guest House','Garage x4','Private Gardens','Mountain Views','Staff Quarters','Gated Access'],dd:['Title clear — family owned 25 years','No HOA — private property','Building permits: complete','Zero active litigation','Environmental permit confirmed','Rural cadastral record verified'],desc:'A landmark villa in the hills above El Retiro, offering genuine privacy, a private pool, and grounds that create a sense of estate. An hour from the city, a world apart.',admin:'Private property — no HOA fee'},
+  // {id:'tn',name:'Torre Nordika',nb:'Laureles',type:'Apartment',beds:2,baths:2,sqm:180,floor:'10th',usd:350000,pd:'$350,000',tags:['Verified','Foreign-Buyer Safe'],badge:'Available',img:'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=700&q=80'],why:['Best value entry to Laureles — consistently strong demand from long-stay expats','Laureles offers the authentic Medellín neighbourhood experience absent in El Poblado','New building (2021) — minimal maintenance costs expected for 10+ years','Efficient 180m² — optimal two-bedroom configuration, no space wasted','High owner-occupancy ratio: signals quality and community stability','Excellent resale liquidity — Laureles maintains consistent buyer demand'],amen:['Pool','Gym','Security 24h','Coworking Space','Rooftop Terrace','Parking x1','Pet Friendly','Bike Storage'],dd:['Title clear — developer to first buyer','HOA fund: well-capitalised','Certificate of Occupancy 2021','Zero litigation history','Strata 5 — Laureles','All fees current'],desc:'A well-specified apartment in Laureles\'s most compelling new building. For buyers prioritising authentic neighbourhood living, rental yield, and entry value.',admin:'Admin: COP 1.1M / month'},
+  // {id:'pd',name:'Penthouse Dorado',nb:'El Poblado',type:'Penthouse',beds:4,baths:5,sqm:420,floor:'32nd + 33rd',usd:1450000,pd:'$1,450,000',tags:['Off-Market','Foreign-Buyer Safe'],badge:'Off-Market',img:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80',imgs:['https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1560185007-5f0bb1866cab?auto=format&fit=crop&w=700&q=80','https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=700&q=80'],why:['Duplex penthouse — 420m² across two levels with private rooftop and plunge pool','No equivalent on the market: only duplex penthouse currently off-market in El Poblado','Designed by architect Juan Mesa — custom finishes, no developer-standard materials','Private rooftop with 360° views, built-in BBQ, 140m² outdoor living area','UHNW standard: wine cellar, home cinema, staff quarters, smart-home throughout','Discreet sale — full dossier only after qualification. Motivated seller, clean transaction.'],amen:['Private Rooftop Pool','Home Cinema','Wine Cellar','Staff Quarters','Private Gym','Concierge 24h','Helipad Access','4 Parking Spaces'],dd:['Title clear — architect-owner','HOA fully funded','Certificate of Occupancy confirmed','Zero active litigation','All permits including rooftop','Strata 6 — El Poblado prime'],desc:'The most exceptional residential property currently available in Medellín. A bespoke duplex penthouse designed and owned by its architect, available exclusively through private inquiry.',admin:'Admin: COP 3.6M / month'}
 ];
 
 /* FORM STATE */
@@ -1207,6 +1166,30 @@ function rev(){
 }
 window.addEventListener('scroll',rev,{passive:true});
 
+/* SHARED FOOTER */
+let footerMarkup='';
+async function injectFooter(target){
+  if(!target||target.dataset.f)return;
+  if(!footerMarkup){
+    try{
+      const response=await fetch('./shared/footer.html');
+      if(!response.ok){
+        console.error('Footer fetch failed:', response.status, response.statusText);
+        return;
+      }
+      footerMarkup=await response.text();
+    }catch(e){
+      console.error('Footer fetch error:', e);
+      return;
+    }
+  }
+  if(footerMarkup){
+    target.dataset.f='1';
+    target.innerHTML=footerMarkup;
+    bindH();
+  }
+}
+
 /* ROUTING */
 function go(pid,propId){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -1219,7 +1202,7 @@ function go(pid,propId){
   // inject footers
   ['h','l','d','a','r','ap'].forEach(id=>{
     const ph=document.getElementById(id==='h'?'hf':id==='l'?'lf':id==='d'?'df':id==='a'?'af':id==='r'?'rf':'apf');
-    if(ph&&!ph.dataset.f){ph.dataset.f='1';ph.innerHTML=document.getElementById('ft').innerHTML;}
+    injectFooter(ph);
   });
   setTimeout(()=>{rev();bindH()},60);
 }
@@ -1439,7 +1422,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   renderHome();
   // inject home footer
   const hf=document.getElementById('hf');
-  if(hf&&!hf.dataset.f){hf.dataset.f='1';hf.innerHTML=document.getElementById('ft').innerHTML;}
+  injectFooter(hf);
   rev();bindH();
 });
 </script>
