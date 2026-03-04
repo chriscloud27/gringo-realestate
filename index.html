@@ -400,8 +400,12 @@ footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
 .fb-lgo{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .fb-lgo svg{height:40px;width:auto}
 .fb-desc{font-size:13px;color:var(--mu);line-height:1.75;max-width:280px;margin-bottom:24px}
-.mpr-brand{gap:16px}
-.mpr-mark{width:56px;height:56px;border:1px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:30px;color:var(--gd);line-height:1;letter-spacing:.03em}
+.mpr-brand{display:flex;align-items:center;gap:16px}
+.nav-logo .mpr-brand{gap:12px}
+.nav-logo .mpr-mark{width:48px;height:48px;font-size:14px}
+.nav-logo .mpr-title{font-size:16px;letter-spacing:.1em}
+.nav-logo .mpr-sub{font-size:8px;letter-spacing:.25em}
+.mpr-mark{width:56px;height:56px;border:1px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:20px;color:var(--gd);line-height:1;letter-spacing:.03em}
 .mpr-wording{display:flex;flex-direction:column;gap:4px}
 .mpr-title{font-family:var(--fs);font-size:22px;letter-spacing:.12em;color:var(--ow);line-height:1}
 .mpr-sub{font-family:var(--fm);font-size:9px;letter-spacing:.32em;color:var(--mu);text-transform:uppercase;line-height:1}
@@ -550,7 +554,13 @@ footer{background:var(--ch);border-top:1px solid var(--bd);padding:72px 0 40px}
 <!-- ═══════════ NAV ═══════════ -->
 <nav id="nav">
   <div class="nav-logo" onclick="go('home')" data-h>
-    <svg height="44" viewBox="0 0 320 80" style="width:auto"><use href="#logo-full"/></svg>
+    <span class="mpr-brand">
+      <span class="mpr-mark">Gringo</span>
+      <span class="mpr-wording">
+        <span class="mpr-title">MEDELLÍN PRIVATE</span>
+        <span class="mpr-sub">LUXURY REAL ESTATE · PRIVATE CLIENTS</span>
+      </span>
+    </span>
   </div>
   <div class="nav-links">
     <a class="nav-link" onclick="go('listings')" data-h>Properties</a>
