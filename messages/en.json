@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Home",
+    "listings": "Listings",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Find Your Dream Home Abroad",
+    "subtitle": "Expert real estate services for expats and foreign buyers in Latin America",
+    "cta": "Browse Listings",
+    "ctaSecondary": "Learn More"
+  },
+  "features": {
+    "title": "Why Choose Gringo Real Estate?",
+    "bilingual": {
+      "title": "Bilingual Support",
+      "description": "Our team speaks your language. We offer full support in English, German, Spanish, and French."
+    },
+    "legal": {
+      "title": "Legal Expertise",
+      "description": "Navigate foreign property laws with confidence. We handle all legal aspects of your purchase."
+    },
+    "local": {
+      "title": "Local Knowledge",
+      "description": "Deep roots in the local market means we find you the best deals before they hit the market."
+    }
+  },
+  "blog": {
+    "title": "Latest from Our Blog",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published on",
+    "noPosts": "No posts available yet."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to find your perfect property? Let's talk.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Thank you! We'll be in touch soon.",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "phonePlaceholder": "+1 234 567 8900",
+    "messagePlaceholder": "Tell us about your property search..."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

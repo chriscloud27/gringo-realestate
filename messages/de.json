@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "listings": "Angebote",
+    "blog": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Finden Sie Ihr Traumhaus im Ausland",
+    "subtitle": "Experten-Immobilienservice für Expatriates und ausländische Käufer in Lateinamerika",
+    "cta": "Angebote ansehen",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "features": {
+    "title": "Warum Gringo Real Estate?",
+    "bilingual": {
+      "title": "Zweisprachiger Support",
+      "description": "Unser Team spricht Ihre Sprache. Wir bieten vollständigen Support auf Englisch, Deutsch, Spanisch und Französisch."
+    },
+    "legal": {
+      "title": "Rechtliche Expertise",
+      "description": "Navigieren Sie ausländische Immobiliengesetze mit Zuversicht. Wir kümmern uns um alle rechtlichen Aspekte Ihres Kaufs."
+    },
+    "local": {
+      "title": "Lokales Wissen",
+      "description": "Tiefe Verwurzelung im lokalen Markt bedeutet, dass wir die besten Angebote finden, bevor sie auf den Markt kommen."
+    }
+  },
+  "blog": {
+    "title": "Aktuelles aus unserem Blog",
+    "readMore": "Mehr lesen",
+    "backToBlog": "Zurück zum Blog",
+    "publishedOn": "Veröffentlicht am",
+    "noPosts": "Noch keine Beiträge verfügbar."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Bereit, Ihre Traumimmobilie zu finden? Lassen Sie uns sprechen.",
+    "name": "Vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "success": "Danke! Wir werden uns bald bei Ihnen melden.",
+    "namePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "max@beispiel.de",
+    "phonePlaceholder": "+49 123 456 7890",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrer Immobiliensuche..."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  }
+}

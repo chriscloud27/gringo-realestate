@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "listings": "Annonces",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Trouvez votre maison de rêve à l'étranger",
+    "subtitle": "Services immobiliers experts pour les expatriés et acheteurs étrangers en Amérique latine",
+    "cta": "Voir les annonces",
+    "ctaSecondary": "En savoir plus"
+  },
+  "features": {
+    "title": "Pourquoi choisir Gringo Real Estate?",
+    "bilingual": {
+      "title": "Support bilingue",
+      "description": "Notre équipe parle votre langue. Nous offrons un support complet en anglais, allemand, espagnol et français."
+    },
+    "legal": {
+      "title": "Expertise juridique",
+      "description": "Naviguez les lois immobilières étrangères en toute confiance. Nous gérons tous les aspects juridiques de votre achat."
+    },
+    "local": {
+      "title": "Connaissance locale",
+      "description": "Une connaissance approfondie du marché local signifie que nous trouvons les meilleures offres avant qu'elles arrivent sur le marché."
+    }
+  },
+  "blog": {
+    "title": "Derniers articles de notre blog",
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au blog",
+    "publishedOn": "Publié le",
+    "noPosts": "Aucun article disponible pour l'instant."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prêt à trouver votre propriété parfaite? Parlons-en.",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "message": "Message",
+    "submit": "Envoyer le message",
+    "success": "Merci! Nous vous contacterons bientôt.",
+    "namePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "jean@exemple.fr",
+    "phonePlaceholder": "+33 1 23 45 67 89",
+    "messagePlaceholder": "Parlez-nous de votre recherche immobilière..."
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}
